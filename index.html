@@ -1,0 +1,2061 @@
+<!DOCTYPE html>
+<html lang="cs"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Za kolik? — Cenová laboratoř</title>
+<meta name="description" content="Výuková pomůcka předmětu Marketing (Škoda Auto Vysoká škola): stanovení ceny produktu podle nákladů, zákazníků a konkurence.">
+<meta name="robots" content="noindex">
+<style>@font-face {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 500;
+  src: url(fonts/fraunces-latin-ext-500-normal.woff2) format('woff2');
+  unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 500;
+  src: url(fonts/fraunces-latin-500-normal.woff2) format('woff2');
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+@font-face {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 600;
+  src: url(fonts/fraunces-latin-ext-600-normal.woff2) format('woff2');
+  unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 600;
+  src: url(fonts/fraunces-latin-600-normal.woff2) format('woff2');
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+@font-face {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 700;
+  src: url(fonts/fraunces-latin-ext-700-normal.woff2) format('woff2');
+  unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 700;
+  src: url(fonts/fraunces-latin-700-normal.woff2) format('woff2');
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+@font-face {
+  font-family: 'Fraunces';
+  font-style: italic;
+  font-display: swap;
+  font-weight: 500;
+  src: url(fonts/fraunces-latin-ext-500-italic.woff2) format('woff2');
+  unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Fraunces';
+  font-style: italic;
+  font-display: swap;
+  font-weight: 500;
+  src: url(fonts/fraunces-latin-500-italic.woff2) format('woff2');
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url(fonts/plus-jakarta-sans-latin-ext-400-normal.woff2) format('woff2');
+  unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url(fonts/plus-jakarta-sans-latin-400-normal.woff2) format('woff2');
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 500;
+  src: url(fonts/plus-jakarta-sans-latin-ext-500-normal.woff2) format('woff2');
+  unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 500;
+  src: url(fonts/plus-jakarta-sans-latin-500-normal.woff2) format('woff2');
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 600;
+  src: url(fonts/plus-jakarta-sans-latin-ext-600-normal.woff2) format('woff2');
+  unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 600;
+  src: url(fonts/plus-jakarta-sans-latin-600-normal.woff2) format('woff2');
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 700;
+  src: url(fonts/plus-jakarta-sans-latin-ext-700-normal.woff2) format('woff2');
+  unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 700;
+  src: url(fonts/plus-jakarta-sans-latin-700-normal.woff2) format('woff2');
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+:root{
+  --dark:#06403B; --em:#00968B; --emL:#77D0B6; --pur:#D7ABFD; --yel:#EDD976; --bg:#FBF9F7;
+  --ink:#16302D; --ink2:#46605C; --muted:#6B7F7C; --line:#E4E0DA; --card:#FFFFFF;
+  --emT:#E3F5EF; --purT:#F4E9FF; --yelT:#FBF5D6; --loss:#06403B; --gain:#00796F; --warn:#8A6A00;
+  --c1:#00968B; --c2:#D7ABFD;
+  --r:16px; --rs:10px;
+  --ff:'Plus Jakarta Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --fh:'Fraunces', Georgia, serif;
+  --shadow:0 1px 2px rgba(6,64,59,.05), 0 6px 24px rgba(6,64,59,.06);
+}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--ff);font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:var(--fh);color:var(--dark);font-weight:600;letter-spacing:-.01em;margin:0}
+h2{font-size:1.9rem;line-height:1.15}
+h3{font-size:1.2rem}
+p{margin:.4em 0}
+a{color:var(--em)}
+button{font:inherit;cursor:pointer}
+.hidden{display:none!important}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+
+/* ---------- top bar ---------- */
+.top{display:flex;align-items:center;gap:16px;padding:12px 24px;border-bottom:1px solid var(--line);background:rgba(251,249,247,.92);backdrop-filter:blur(6px);position:sticky;top:0;z-index:30}
+.brand{font-family:var(--fh);font-size:1.45rem;font-weight:700;color:var(--dark);text-decoration:none;display:flex;align-items:center;gap:8px;white-space:nowrap}
+.brand .tag{display:inline-grid;place-items:center;width:30px;height:30px;border-radius:9px 9px 9px 2px;background:var(--yel);font-size:.95rem;transform:rotate(-8deg)}
+.proj{flex:1;min-width:0;color:var(--ink2);font-size:.92rem;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.proj b{color:var(--dark)}
+.savestate{font-size:.8rem;color:var(--muted);white-space:nowrap}
+.menu{position:relative}
+.menu>summary{list-style:none;border:1px solid var(--line);background:#fff;border-radius:999px;padding:7px 14px;font-weight:600;color:var(--dark);font-size:.9rem;cursor:pointer}
+.menu>summary::-webkit-details-marker{display:none}
+.menu .pop{position:absolute;right:0;top:calc(100% + 8px);background:#fff;border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);padding:8px;min-width:270px;z-index:40}
+.menu .pop button{display:block;width:100%;text-align:left;background:none;border:0;padding:9px 12px;border-radius:9px;color:var(--ink)}
+.menu .pop button:hover{background:var(--emT)}
+.menu .pop .danger{color:var(--loss)}
+.menu .pop .note{font-size:.78rem;color:var(--muted);padding:8px 12px 4px;border-top:1px solid var(--line);margin-top:6px}
+
+.demo-banner{background:repeating-linear-gradient(135deg,var(--yelT) 0 14px,#F7EDB8 14px 28px);border-bottom:1px solid #E9DB98;padding:9px 24px;display:flex;gap:12px;align-items:center;flex-wrap:wrap;font-size:.92rem}
+.demo-banner b{color:var(--dark)}
+.demo-banner .sp{flex:1}
+
+/* ---------- stepper ---------- */
+.stepper{display:flex;gap:6px;padding:14px 24px 0;overflow-x:auto;scrollbar-width:none}
+.stepper::-webkit-scrollbar{display:none}
+.st{flex:1 0 auto;min-width:132px;display:flex;align-items:center;gap:10px;border:1px solid var(--line);background:#fff;border-radius:14px;padding:9px 12px;text-align:left;color:var(--ink);transition:border-color .15s, box-shadow .15s}
+.st:hover{border-color:var(--emL)}
+.st.on{border-color:var(--em);box-shadow:0 0 0 3px var(--emT)}
+.st .n{display:grid;place-items:center;width:28px;height:28px;border-radius:50%;background:var(--bg);border:1.5px solid var(--line);font-weight:700;font-size:.85rem;color:var(--ink2);flex:none}
+.st.done .n{background:var(--em);border-color:var(--em);color:#fff}
+.st.progress .n{border-color:var(--em);color:var(--dark);background:var(--emT)}
+.st .t{display:flex;flex-direction:column;line-height:1.2}
+.st .t b{font-size:.9rem;font-weight:600;white-space:nowrap}
+.st .t small{font-size:.74rem;color:var(--muted)}
+.st.done .t small{color:var(--gain);font-weight:600}
+.st.progress .t small{color:var(--dark)}
+
+/* ---------- layout ---------- */
+.layout{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:28px;padding:22px 24px 80px;max-width:1360px;margin:0 auto}
+main{min-width:0}
+aside{position:sticky;top:76px;align-self:start}
+@media (max-width:1099px){ .layout{grid-template-columns:1fr} aside{display:none} }
+@media (min-width:1100px){ .msum{display:none} }
+
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:22px;box-shadow:var(--shadow)}
+.card+.card,.block+.block{margin-top:18px}
+.grid2>.card{margin-top:0!important}
+.stephead{margin-bottom:18px}
+.stephead .kicker{font-size:.8rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--em)}
+.stephead p{color:var(--ink2);max-width:62ch}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+@media (max-width:760px){ .grid2{grid-template-columns:1fr} h2{font-size:1.55rem} .layout{padding:16px 14px 80px} .top{padding:10px 14px} .stepper{padding:10px 14px 0} .card{padding:16px} }
+
+/* ---------- forms ---------- */
+.f{display:flex;flex-direction:column;gap:5px;margin-bottom:14px}
+.f>label,.lbl{font-weight:600;font-size:.9rem;color:var(--dark)}
+.f .opt{font-weight:400;color:var(--muted);font-size:.8rem}
+.hint{font-size:.83rem;color:var(--ink2)}
+input[type=text],input[type=date],input[type=url],textarea,select{font:inherit;color:var(--ink);background:#fff;border:1.5px solid var(--line);border-radius:var(--rs);padding:9px 11px;width:100%;transition:border-color .15s, box-shadow .15s}
+textarea{resize:vertical;min-height:70px}
+input:focus,textarea:focus,select:focus{outline:none;border-color:var(--em);box-shadow:0 0 0 3px var(--emT)}
+input.bad,textarea.bad{border-color:var(--pur);border-width:2px;background:#FBF5FF}
+.errmsg{font-size:.8rem;color:var(--loss);font-weight:600}
+.withsuf{display:flex;align-items:center;gap:8px}
+.withsuf input{flex:1}
+.withsuf .suf{color:var(--ink2);font-size:.9rem;white-space:nowrap}
+.num{text-align:right;font-variant-numeric:tabular-nums}
+
+.btn{border:1.5px solid var(--dark);background:var(--dark);color:#fff;border-radius:999px;padding:10px 18px;font-weight:600;display:inline-flex;align-items:center;gap:8px;transition:transform .1s, background .15s}
+.btn:hover{background:#0A5A53}
+.btn:active{transform:translateY(1px)}
+.btn.ghost{background:#fff;color:var(--dark);border-color:var(--line)}
+.btn.ghost:hover{border-color:var(--em);background:var(--emT)}
+.btn.soft{background:var(--emT);color:var(--dark);border-color:transparent}
+.btn.soft:hover{background:#D3EFE6}
+.btn.yel{background:var(--yel);border-color:var(--yel);color:var(--dark)}
+.btn.yel:hover{background:#E5CF5C}
+.btn.danger{background:var(--pur);border-color:var(--pur);color:var(--dark)}
+.btn.danger:hover{background:#C994F7}
+.btn.sm{padding:6px 12px;font-size:.85rem}
+.btn[disabled]{opacity:.45;cursor:not-allowed}
+.iconbtn{border:0;background:none;color:var(--muted);width:34px;height:34px;border-radius:8px;display:grid;place-items:center;font-size:1.1rem}
+.iconbtn:hover{background:var(--purT);color:var(--loss)}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 4px}
+.chip{border:1px dashed var(--emL);background:#fff;border-radius:999px;padding:4px 11px;font-size:.82rem;color:var(--dark)}
+.chip:hover{background:var(--emT);border-style:solid}
+.navrow{display:flex;justify-content:space-between;gap:10px;margin-top:24px;flex-wrap:wrap}
+
+/* info boxes */
+.info{border-radius:14px;padding:13px 16px;font-size:.9rem;background:var(--emT);color:var(--ink);border-left:4px solid var(--em)}
+.info.pur{background:var(--purT);border-left-color:var(--pur)}
+.info.yel{background:var(--yelT);border-left-color:var(--yel)}
+.info.warn{background:#FFF6DB;border-left-color:#E0B400}
+.info.bad{background:#F7ECFD;border-left-color:var(--pur)}
+.info b{color:var(--dark)}
+.info+.info{margin-top:10px}
+.hanka{background:var(--yel);border-radius:4px 18px 18px 18px;padding:16px 18px;transform:rotate(-.6deg);box-shadow:0 8px 18px rgba(130,110,0,.15);max-width:520px;margin-top:20px}
+.hanka .who{font-family:var(--fh);font-weight:700;color:var(--dark);font-size:.95rem}
+details.how{margin-top:14px;border:1px solid var(--line);border-radius:12px;background:#fff}
+details.how>summary{cursor:pointer;padding:10px 14px;font-weight:600;color:var(--dark);font-size:.9rem}
+details.how>div{padding:0 14px 14px;font-size:.9rem}
+.formula{font-variant-numeric:tabular-nums;background:var(--bg);border-radius:8px;padding:8px 10px;margin:6px 0;font-family:ui-monospace,'SF Mono',Menlo,monospace;font-size:.84rem;overflow-x:auto}
+
+/* rows (costs, respondents) */
+.rows{display:flex;flex-direction:column;gap:8px}
+.row{display:grid;gap:8px;align-items:start;background:var(--bg);border-radius:12px;padding:10px}
+.row.fixed{grid-template-columns:minmax(0,1fr) 118px 34px}
+.row.fixed .nm{grid-column:1/3}
+.row.var{grid-template-columns:minmax(0,1fr) 34px}
+.row .note{grid-column:1/-2}
+.row .amt{grid-column:1/2}
+.row .sub{font-size:.76rem;color:var(--muted);margin-top:3px}
+.row.resp{grid-template-columns:110px minmax(0,1fr) minmax(0,1fr) 34px;align-items:center}
+.row.resp.err{background:#F7ECFD;outline:1.5px solid var(--pur)}
+.rowhead{display:grid;gap:8px;padding:0 10px;font-size:.76rem;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.04em}
+.rowhead.resp{grid-template-columns:110px minmax(0,1fr) minmax(0,1fr) 34px}
+.rowmsg{grid-column:1/-1;font-size:.8rem;color:var(--loss);font-weight:600}
+@media (max-width:640px){
+  .row.resp{grid-template-columns:1fr 1fr 34px;grid-template-areas:"lab lab x" "id mx mx" "msg msg msg";align-items:end}
+  .row.resp .lab{grid-area:lab}.row.resp .tg{grid-area:tg}.row.resp .iconbtn{grid-area:x}.row.resp .cid{grid-area:id}.row.resp .cmx{grid-area:mx}.row.resp .rowmsg{grid-area:msg}
+  .brand{font-size:1.2rem}.savestate{display:none}
+  .rowhead.resp{display:none}
+  .row.resp input::placeholder{color:var(--ink2)}
+}
+
+/* tiles */
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px}
+.tile{background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px 14px}
+.tile .k{font-size:.78rem;color:var(--ink2);line-height:1.3}
+.tile .v{font-family:var(--fh);font-size:1.45rem;font-weight:600;color:var(--dark);font-variant-numeric:tabular-nums;line-height:1.2;margin-top:4px}
+.tile .v small{font-family:var(--ff);font-size:.78rem;color:var(--muted);font-weight:500}
+.tile.hl{background:var(--emT);border-color:transparent}
+.tile .miss{font-size:.78rem;color:var(--muted);margin-top:2px}
+
+/* summary panel */
+.sum{background:var(--dark);color:#EAF7F3;border-radius:20px;padding:20px;box-shadow:var(--shadow)}
+.sum h3{color:#fff;font-size:1.05rem;margin-bottom:10px;display:flex;justify-content:space-between;align-items:baseline}
+.sum h3 small{font-family:var(--ff);font-size:.72rem;color:var(--emL);font-weight:500}
+.sum .it{padding:11px 0;border-top:1px solid rgba(255,255,255,.12)}
+.sum .it .k{font-size:.78rem;color:#B9DDD5}
+.sum .it .v{font-family:var(--fh);font-size:1.4rem;font-weight:600;color:#fff;font-variant-numeric:tabular-nums;line-height:1.25}
+.sum .it .v small{font-family:var(--ff);font-size:.75rem;color:#B9DDD5;font-weight:500}
+.sum .it .m{font-size:.8rem;color:#CDE9E2}
+.sum .pos{color:var(--emL)} .sum .neg{color:var(--pur)}
+.sum .quip{margin-top:10px;font-size:.84rem;background:rgba(255,255,255,.08);border-radius:12px;padding:10px 12px;color:#EAF7F3}
+.sum .storage{margin-top:12px;font-size:.74rem;color:#9CC9BF}
+.msum{margin-bottom:16px;position:sticky;top:62px;z-index:20}
+.msum>summary{list-style:none;background:var(--dark);color:#fff;border-radius:14px;padding:10px 14px;display:flex;gap:14px;align-items:center;font-size:.86rem;cursor:pointer;box-shadow:var(--shadow)}
+.msum>summary::-webkit-details-marker{display:none}
+.msum>summary .x{margin-left:auto;color:var(--emL);font-size:.8rem;white-space:nowrap}
+.msum>summary b{font-family:var(--fh);font-size:1rem}
+.msum[open]{position:static}
+.msum[open]>summary{border-radius:14px 14px 0 0}
+.msum .sum{border-radius:0 0 14px 14px;padding-top:6px}
+
+/* results values */
+.pos{color:var(--gain)} .neg{color:var(--loss)}
+.pill{display:inline-flex;align-items:center;gap:5px;border-radius:999px;padding:2px 10px;font-size:.78rem;font-weight:700}
+.pill.pos{background:var(--emT)} .pill.neg{background:var(--purT)}
+
+/* choice cards */
+.choices{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px;margin:8px 0 14px}
+.choice{position:relative;border:1.5px solid var(--line);border-radius:14px;padding:12px 14px;background:#fff;cursor:pointer;display:block}
+.choice:hover{border-color:var(--emL)}
+.choice input{position:absolute;opacity:0}
+.choice b{display:block;color:var(--dark);font-size:.95rem}
+.choice span{font-size:.8rem;color:var(--ink2)}
+.choice.on{border-color:var(--em);background:var(--emT)}
+.choice:focus-within{box-shadow:0 0 0 3px var(--emT)}
+.check{display:flex;gap:10px;align-items:flex-start;font-size:.92rem;cursor:pointer;margin:8px 0}
+.check input{width:18px;height:18px;accent-color:var(--em);margin-top:2px}
+
+/* competitor cards */
+.comps{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px}
+.comp{background:var(--bg);border-radius:14px;padding:14px;position:relative}
+.comp .hd{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}
+.comp .hd b{font-family:var(--fh);color:var(--dark)}
+.comp .unitp{background:#fff;border-radius:10px;padding:8px 10px;font-size:.88rem;margin-bottom:10px}
+.comp .unitp b{font-family:var(--fh);font-size:1.15rem;color:var(--dark)}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+
+/* big price input */
+.bigprice{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.bigprice input{font-family:var(--fh);font-size:2rem;font-weight:600;color:var(--dark);max-width:240px;padding:8px 14px;text-align:right}
+.bigprice .suf{font-size:1.1rem;color:var(--ink2)}
+
+/* experiment */
+.ctrls{display:grid;grid-template-columns:1fr 1fr;gap:16px 22px}
+@media (max-width:760px){.ctrls{grid-template-columns:1fr}}
+.ctrl .top2{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:4px}
+.ctrl .top2 label{font-weight:600;font-size:.9rem;color:var(--dark)}
+.ctrl .top2 .plan{font-size:.76rem;color:var(--muted)}
+.ctrl .row2{display:flex;gap:10px;align-items:center}
+.ctrl input[type=range]{flex:1;accent-color:var(--em);height:28px}
+.ctrl input[type=text]{width:130px;flex:none}
+.ctrl .suf{font-size:.85rem;color:var(--ink2);min-width:46px}
+.quick{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.quick .lbl{margin-right:4px}
+table.cmp{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+table.cmp th,table.cmp td{padding:10px 10px;text-align:right;border-bottom:1px solid var(--line);font-size:.93rem}
+table.cmp th:first-child,table.cmp td:first-child{text-align:left}
+table.cmp thead th{font-size:.76rem;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);font-weight:700}
+table.cmp td.big{font-weight:700;color:var(--dark)}
+table.cmp .sw{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:6px;vertical-align:baseline}
+.tablewrap{overflow-x:auto}
+.charts{display:grid;grid-template-columns:1fr;gap:28px}
+.charts .chart svg{max-width:760px}
+.chart h4{margin:0 0 2px;font-family:var(--fh);color:var(--dark);font-size:1rem}
+.chart .cap{font-size:.8rem;color:var(--ink2);margin-bottom:6px}
+.legend{display:flex;flex-wrap:wrap;gap:14px;font-size:.8rem;color:var(--ink2);margin:4px 0 6px}
+.legend i{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+.legend i.ln{height:3px;border-radius:2px;vertical-align:3px;width:16px}
+.legend i.dash{background:none!important;border-top:2.5px dashed;height:0;vertical-align:3px;width:16px}
+svg.ch{width:100%;height:auto;display:block;overflow:visible}
+svg.ch text{font-family:var(--ff);font-size:12px;fill:var(--ink2)}
+svg.ch .axt{font-size:12px;fill:var(--muted)}
+svg.ch .lbl{font-weight:700;fill:var(--ink)}
+.feedback{display:flex;gap:12px;align-items:flex-start;border-radius:14px;padding:14px 16px;font-size:.95rem}
+.feedback .ic{font-size:1.3rem;line-height:1}
+.feedback.pos{background:var(--emT);color:var(--ink)}
+.feedback.neg{background:var(--purT);color:var(--ink)}
+.feedback.mid{background:var(--yelT);color:var(--ink)}
+.feedback b{color:var(--dark)}
+.pricechange{background:var(--yel);color:var(--dark);border-radius:12px;padding:10px 14px;font-weight:600;font-size:.9rem}
+
+/* tooltip */
+#tip{position:fixed;pointer-events:none;background:var(--dark);color:#fff;font-size:.8rem;padding:7px 10px;border-radius:9px;z-index:100;max-width:260px;box-shadow:var(--shadow);opacity:0;transition:opacity .1s;white-space:pre-line}
+#tip.on{opacity:1}
+
+/* intro */
+.intro{min-height:calc(100vh - 60px);display:grid;place-items:center;padding:40px 20px;position:relative;overflow:hidden}
+.intro .in{max-width:760px;position:relative;z-index:1}
+.intro h1{font-size:clamp(3rem,9vw,6.2rem);line-height:.95;letter-spacing:-.03em}
+.intro h1 span{display:inline-block;background:var(--yel);padding:0 .12em;border-radius:.15em;transform:rotate(-2deg)}
+.intro .subt{font-family:var(--fh);font-style:italic;font-size:clamp(1.15rem,2.6vw,1.5rem);color:var(--em);margin:14px 0 22px}
+.intro .lead{font-size:1.08rem;color:var(--ink2);max-width:56ch}
+.intro .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.intro .cta .btn{padding:14px 22px;font-size:1rem}
+.intro .three{display:flex;gap:10px;flex-wrap:wrap;margin-top:34px}
+.intro .three span{border-radius:999px;padding:6px 14px;font-size:.85rem;font-weight:600}
+.intro .tagdeco{position:absolute;right:-60px;top:12%;width:340px;opacity:.9;z-index:0}
+@media (max-width:900px){.intro .tagdeco{display:none}}
+.intro .note{font-size:.8rem;color:var(--muted);margin-top:18px}
+
+/* modal */
+.modal{position:fixed;inset:0;background:rgba(6,64,59,.35);display:grid;place-items:center;z-index:90;padding:16px}
+.modal .box{background:#fff;border-radius:20px;max-width:560px;width:100%;padding:24px;box-shadow:0 20px 60px rgba(0,0,0,.2);max-height:90vh;overflow:auto}
+.modal .box.wide{max-width:900px}
+.modal h3{margin-bottom:8px}
+.modal .acts{display:flex;justify-content:flex-end;gap:10px;margin-top:18px;flex-wrap:wrap}
+.toast{position:fixed;left:50%;bottom:22px;transform:translateX(-50%);background:var(--dark);color:#fff;border-radius:999px;padding:10px 18px;font-size:.9rem;z-index:95;box-shadow:var(--shadow)}
+
+.flash{animation:flash .6s ease}
+@keyframes flash{0%{background:rgba(237,217,118,.55)}100%{background:transparent}}
+@media (prefers-reduced-motion:reduce){ *{animation:none!important;transition:none!important} }
+.footer{font-size:.78rem;color:var(--muted);text-align:center;padding:10px 20px 30px}
+.rep table{width:100%;border-collapse:collapse;margin:6px 0;font-size:.85rem}.rep th,.rep td{border-bottom:1px solid var(--line);padding:5px 6px;text-align:left;vertical-align:top}.rep .r{text-align:right}.rep h1{font-size:1.6rem}.rep h2{font-size:1.15rem;margin:20px 0 6px;border-bottom:2px solid var(--emL)}.rep .kpi{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}.rep .kpi div{background:var(--emT);border-radius:8px;padding:8px;font-size:.8rem}.rep .kpi b{display:block;font-family:var(--fh);font-size:1.05rem}.rep .note{color:var(--muted);font-size:.8rem}.rep .box{background:var(--yelT);border-radius:8px;padding:8px;margin:6px 0}.rep .exp{border:2px dashed var(--c2);border-radius:10px;padding:4px 12px 10px;margin-top:20px}.rep .charts{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+
+.mlbl{display:none;font-size:.72rem;color:var(--muted);font-weight:600}
+@media (max-width:640px){.mlbl{display:block}}
+@media (max-width:640px){
+  table.cmp th,table.cmp td{padding:8px 5px;font-size:.82rem}
+  .chart{overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .chart svg.ch{min-width:500px}
+  .stephead p{font-size:.95rem}
+}
+
+.chip.on{border-style:solid;background:var(--emT);color:var(--gain);cursor:default}
+/* krok 6 — pracovní obrazovka */
+.layout.wide{grid-template-columns:1fr}
+.layout.wide aside{display:none}
+.lab6{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:18px;align-items:start}
+.lab6-in{display:flex;flex-direction:column;gap:14px}
+.lab6-in .card+.card{margin-top:0}
+.lab6-out{position:sticky;top:76px}
+@media (max-width:1000px){.lab6{grid-template-columns:1fr}.lab6-out{position:static}}
+.xrows{display:flex;flex-direction:column;gap:6px;margin-top:8px}
+.xrow{display:grid;grid-template-columns:minmax(0,1.9fr) minmax(80px,.8fr) 118px 34px;gap:6px;align-items:center}
+.xrow.v{grid-template-columns:minmax(0,1.9fr) minmax(130px,1fr) 34px}
+.xrow input,.xrow select{padding:7px 9px;font-size:.9rem}
+@media (max-width:560px){.xrow{grid-template-columns:1fr 1fr 34px}.xrow>input:first-child{grid-column:1/-1}.xrow.v{grid-template-columns:1fr 34px}.xrow.v>input:first-child{grid-column:1/-1}}
+.seg{display:inline-flex;background:var(--bg);border:1px solid var(--line);border-radius:999px;padding:3px;margin:6px 0 14px;flex-wrap:wrap}
+.seg label{padding:7px 14px;border-radius:999px;font-size:.88rem;font-weight:600;color:var(--ink2);cursor:pointer}
+.seg label.on{background:var(--dark);color:#fff}
+.seg input{position:absolute;opacity:0;pointer-events:none}
+.seg label:focus-within{box-shadow:0 0 0 3px var(--emT)}
+table.cmp tr.sep td{border-top:2px solid var(--line)}
+table.cmp tr.big td{font-weight:700;color:var(--dark);font-size:1rem}
+.xbar{display:none}
+@media (max-width:1000px){.xbar:not(:empty){display:flex;gap:14px;flex-wrap:wrap;position:sticky;top:62px;z-index:20;background:var(--dark);color:#fff;border-radius:12px;padding:9px 14px;font-size:.85rem;margin-bottom:14px;box-shadow:var(--shadow)}.xbar b{color:var(--yel)}}
+/* krok 7 — shrnutí */
+.sheetwrap{background:#EEEAE4;border-radius:14px;padding:18px;margin-top:14px;overflow-x:auto}
+.pdfsheet{background:#fff;max-width:794px;margin:0 auto;padding:30px 34px;box-shadow:0 4px 20px rgba(0,0,0,.08);font-size:.86rem;color:var(--ink)}
+.pdfsheet.printing{box-shadow:none}
+.pdfsheet h1{font-size:1.7rem}
+.rep .hero{display:grid;grid-template-columns:200px 1fr;gap:14px;background:var(--dark);color:#fff;border-radius:12px;padding:16px;margin:12px 0}
+.rep .hero .hp{font-size:.78rem;color:#B9DDD5}.rep .hero .hp b{display:block;font-family:var(--fh);font-size:2rem;color:var(--yel);line-height:1.15}.rep .hero .hp span{font-size:.78rem}
+.rep .hero .hk{display:grid;grid-template-columns:repeat(2,1fr);gap:8px 16px;font-size:.76rem;color:#B9DDD5}.rep .hero .hk b{display:block;font-family:var(--fh);font-size:1.05rem;color:#fff}
+.rep .hero .pos{color:var(--emL)}.rep .hero .neg{color:var(--pur)}
+.rep section{break-inside:avoid-page}
+@media (max-width:640px){.pdfsheet{padding:18px}.rep .hero{grid-template-columns:1fr}.rep .kpi{grid-template-columns:1fr 1fr}}
+</style></head><body><div id="app"></div>
+<script src="html2pdf.bundle.min.js"></script>
+<script>
+// ===== Za kolik? — výpočetní jádro =====
+// Čísla: vstupy jsou textové řetězce (česká desetinná čárka), výsledky nikdy NaN/Infinity.
+
+function parseNum(raw) {
+  // Vrací {state:'empty'|'ok'|'invalid', value:number|null}
+  if (raw === null || raw === undefined) return { state: 'empty', value: null };
+  if (typeof raw === 'number') return isFinite(raw) ? { state: 'ok', value: raw } : { state: 'invalid', value: null };
+  let s = String(raw).trim();
+  if (s === '') return { state: 'empty', value: null };
+  s = s.replace(/kč/gi, '').replace(/%/g, '').replace(/[\s  ]/g, '');
+  // "1.200,50" → tečky jako oddělovač tisíců jen pokud je i čárka
+  if (s.includes(',') && s.includes('.')) s = s.replace(/\./g, '');
+  s = s.replace(',', '.');
+  if (!/^[-+−]?\d+(\.\d+)?$/.test(s) && !/^[-+−]?\.\d+$/.test(s)) return { state: 'invalid', value: null };
+  const v = Number(s.replace('−', '-'));
+  return isFinite(v) ? { state: 'ok', value: v } : { state: 'invalid', value: null };
+}
+
+function numOrNull(raw) { const p = parseNum(raw); return p.state === 'ok' ? p.value : null; }
+
+// Zaokrouhlení nahoru na přesnost prodejní jednotky (např. 1, 0.5, 0.1)
+function ceilToPrecision(x, prec) {
+  if (!(prec > 0)) prec = 1;
+  const k = x / prec;
+  // tolerance proti 1199.9999999 → 1200
+  const r = Math.ceil(k - 1e-9);
+  return Number((r * prec).toFixed(6));
+}
+
+// Agregace nákladů z položek
+function sumFixed(items) {
+  // vrací {value, filled, invalid, list}
+  let total = 0, filled = 0, invalid = 0;
+  for (const it of items || []) {
+    const p = parseNum(it.amount);
+    if (p.state === 'invalid' || (p.state === 'ok' && p.value < 0)) { invalid++; continue; }
+    if (p.state === 'ok') { filled++; total += it.period === 'm' ? p.value * 12 : p.value; }
+  }
+  return { value: filled ? total : null, filled, invalid };
+}
+function sumVariable(items) {
+  let total = 0, filled = 0, invalid = 0;
+  for (const it of items || []) {
+    const p = parseNum(it.amount);
+    if (p.state === 'invalid' || (p.state === 'ok' && p.value < 0)) { invalid++; continue; }
+    if (p.state === 'ok') { filled++; total += p.value; }
+  }
+  return { value: filled ? total : null, filled, invalid };
+}
+
+// Hlavní model: F, v, Q, P jsou čísla nebo null
+function model(F, v, Q, P, prec) {
+  const r = { F, v, Q, P };
+  const has = x => typeof x === 'number' && isFinite(x);
+  r.varTotal = has(v) && has(Q) ? v * Q : null;
+  r.costTotal = has(F) && has(v) && has(Q) ? F + v * Q : null;
+  r.fixedPerUnit = has(F) && has(Q) && Q > 0 ? F / Q : null;
+  r.unitCost = has(F) && has(v) && has(Q) && Q > 0 ? F / Q + v : null;
+  r.unitCostState = !has(Q) ? 'missing' : (Q === 0 ? 'q0' : (has(F) && has(v) ? 'ok' : 'missing'));
+  r.revenue = has(P) && has(Q) ? P * Q : null;
+  r.profit = has(P) && has(Q) && has(F) && has(v) ? P * Q - F - v * Q : null;
+  r.contribution = has(P) && has(v) ? P - v : null;
+  // bod zvratu
+  if (has(P) && has(v) && has(F)) {
+    if (P > v) {
+      const raw = F / (P - v);
+      r.beState = F === 0 ? 'zero' : 'ok';
+      r.beRaw = raw;
+      r.be = ceilToPrecision(raw, prec);
+    } else if (P === v) {
+      r.beState = F > 0 ? 'eq_fixed' : 'eq_zero';
+      r.be = null;
+    } else {
+      r.beState = 'below';
+      r.be = null;
+    }
+  } else { r.beState = 'missing'; r.be = null; }
+  return r;
+}
+
+// Statistika zákaznické sondy
+function median(a) {
+  if (!a.length) return null;
+  const s = [...a].sort((x, y) => x - y), m = Math.floor(s.length / 2);
+  return s.length % 2 ? s[m] : (s[m - 1] + s[m]) / 2;
+}
+function mean(a) { return a.length ? a.reduce((x, y) => x + y, 0) / a.length : null; }
+
+function respondentStats(rows, onlyTarget) {
+  const out = { complete: 0, used: [], errors: [], outside: 0, unknown: 0, partial: 0, invalid: 0 };
+  (rows || []).forEach((r, i) => {
+    const pi = parseNum(r.ideal), pm = parseNum(r.max);
+    const empty = pi.state === 'empty' && pm.state === 'empty';
+    if (empty) return;
+    if (pi.state === 'invalid' || pm.state === 'invalid' || (pi.value !== null && pi.value < 0) || (pm.value !== null && pm.value < 0)) { out.invalid++; out.errors.push({ i, kind: 'invalid' }); return; }
+    if (pi.state === 'empty' || pm.state === 'empty') { out.partial++; out.errors.push({ i, kind: 'partial' }); return; }
+    if (pm.value < pi.value) { out.errors.push({ i, kind: 'maxlow' }); return; }
+    out.complete++;
+    if (r.target === 'ne') out.outside++;
+    if (r.target === 'nevime' || !r.target) out.unknown++;
+    if (onlyTarget && r.target !== 'ano') return;
+    out.used.push({ i, ideal: pi.value, max: pm.value, target: r.target || '' });
+  });
+  const ideals = out.used.map(u => u.ideal), maxs = out.used.map(u => u.max);
+  out.n = out.used.length;
+  out.idealMean = mean(ideals); out.idealMedian = median(ideals);
+  out.maxMean = mean(maxs); out.maxMedian = median(maxs);
+  return out;
+}
+
+// Konkurence: cena na jednotku
+function competitorUnit(c) {
+  const p = parseNum(c.price), q = parseNum(c.qty === undefined || c.qty === '' ? '1' : c.qty);
+  if (p.state !== 'ok' || p.value < 0) return { state: p.state === 'empty' ? 'empty' : 'invalid', value: null };
+  if (q.state !== 'ok' || q.value <= 0) return { state: 'badqty', value: null };
+  return { state: 'ok', value: p.value / q.value };
+}
+
+if (false && typeof module !== 'undefined') module.exports = { parseNum, numOrNull, ceilToPrecision, sumFixed, sumVariable, model, respondentStats, competitorUnit, median, mean };
+
+// ===== Stav, formátování, odvozené hodnoty =====
+const STORE_KEY = 'zakolik.v1';
+const uid = () => Math.random().toString(36).slice(2, 9);
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+
+const UNITS = {
+  kus: { label: 'kus', short: 'ks', fixedPrec: 1 },
+  baleni: { label: 'balení', short: 'bal.', fixedPrec: 1 },
+  hodina: { label: 'hodina služby', short: 'h', fixedPrec: null },
+  predplatne: { label: 'měsíční předplatné', short: 'měs. předpl.', fixedPrec: 1 },
+  jine: { label: 'jiná jednotka', short: 'j.', fixedPrec: null },
+};
+const PRECS = [['1', 'celé jednotky'], ['0.5', 'po 0,5'], ['0.25', 'po 0,25'], ['0.1', 'po 0,1'], ['0.01', 'po 0,01']];
+const STRATS = {
+  ekonomicka: ['Ekonomická', 'Nízká cena, velké množství, úsporný provoz.', 'Obrovské množství prodaných jednotek při nízké ceně. Funguje, když umíte vyrábět levně a ve velkém a zákazník hledá hlavně základní funkci za málo peněz.'],
+  penetracni: ['Penetrační', 'Nízký vstup na trh, cílem je podíl.', 'Vstup na trh za relativně nízkou cenu s cílem rychle získat zákazníky a tržní podíl. Počítejte s tím, že první období může být ztrátové a že pozdější zdražení zákazníci vnímají citlivě.'],
+  skimmingova: ['Skimmingová', 'Vysoký vstup, později výrazné zlevnění.', 'Cenové zužitkování: začínáte vysoko u zákazníků, kteří chtějí novinku hned, a později cenu výrazně snížíte (typicky elektronika před příchodem nového modelu).'],
+  premiova: ['Prémiová', 'Trvale vysoká cena vyjadřující prestiž.', 'Vysoká cena, která vyjadřuje prestiž a zůstává po celý životní cyklus produktu. Musí ji podpořit kvalita, značka, design i zážitek.'],
+};
+// Příklady nákladů: [název, výchozí období]
+const FIXED_EX = [['Mzdy (vaše mzdy jako manažerů firmy)', 'm'], ['Nájem', 'm'], ['Energie a voda', 'm'], ['Internet a telefon', 'm'], ['Software a licence', 'm'],
+  ['Účetnictví', 'm'], ['Pojištění', 'y'], ['Odpisy vybavení', 'y'],
+  ['Pronájem nebo leasing vybavení', 'm'], ['Marketingová komunikace (web, sociální sítě, reklama)', 'm']];
+const VAR_EX = ['Materiál', 'Nakupovaný produkt (zboží)', 'Obal', 'Etiketa, návod, tisk', 'Práce placená za kus', 'Balení a expedice objednávky', 'Doprava na objednávku',
+  'Poplatek platební brány', 'Reklamace a vratky (odhad na kus)'];
+const POSITIONS = {
+  levnejsi: ['Levnější alternativa', 'Zákazník u nás ušetří.'],
+  podobna: ['Podobná cenová úroveň', 'Vyhráváme něčím jiným než cenou.'],
+  drazsi: ['Dražší nabídka s vyšší hodnotou', 'Za víc peněz nabízíme víc.'],
+};
+
+function blankProject() {
+  return {
+    v: 1, isDemo: false,
+    meta: { team: '', product: '', desc: '', unit: 'kus', unitCustom: '', prec: '1', qty: '', qtyReason: '' },
+    fixed: [],
+    variable: [],
+    resp: Array.from({ length: 6 }, (_, i) => ({ id: uid(), label: 'R' + (i + 1), ideal: '', max: '', target: '' })),
+    respOnlyTarget: false,
+    comps: [0, 1].map(() => ({ id: uid(), name: '', price: '', qty: '1', source: '', date: '', diff: '' })),
+    noComp: false, noCompReason: '', alternative: '', position: '', positionWhy: '',
+    pricing: { price: '', markup: '', strategy: '', strategyWhy: '', strategyWhyNot: '', manipulations: '', defCosts: '', defCustomers: '', defCompetition: '' },
+    plan: null, exp: null, expTried: false,
+  };
+}
+
+function demoProject() {
+  const p = blankProject();
+  p.isDemo = true;
+  p.meta = {
+    team: 'Tým Datlová dílna (ukázka)', product: 'Budka do kapsy — sada na stavbu ptačí budky',
+    desc: 'Předřezaná sada z českého smrku se šroubky a obrázkovým návodem. Pro rodiny s dětmi 6–12 let, které chtějí víkendový projekt bez nářadí z dílny.',
+    unit: 'kus', unitCustom: '', prec: '1', qty: '2000',
+    qtyReason: 'Rodiny s dětmi 6–12 let ve Středočeském kraji → zájemci o tvoření s dětmi → ti, kteří nakupují online. Odhad ověřujeme na předobjednávkách z pilotního e-shopu.',
+  };
+  p.fixed = [
+    { id: uid(), name: 'Nájem malé dílny', amount: '5000', period: 'm', note: 'Nabídka z inzerátu, Mladá Boleslav' },
+    { id: uid(), name: 'Odpisy vybavení (pila, vrtačka)', amount: '24000', period: 'y', note: 'Vybavení za 72 000 Kč na 3 roky' },
+    { id: uid(), name: 'E-shop a účetní software', amount: '1000', period: 'm', note: 'Měsíční licence' },
+    { id: uid(), name: 'Vlastní práce — správa e-shopu', amount: '2000', period: 'm', note: 'Oceněno, i když ji děláme sami' },
+  ];
+  p.variable = [
+    { id: uid(), name: 'Dřevo a spojovací materiál', amount: '55', note: 'Ceník pily, 1 sada' },
+    { id: uid(), name: 'Krabička a tištěný návod', amount: '15', note: '' },
+    { id: uid(), name: 'Doprava hrazená firmou', amount: '20', note: 'Průměr na objednávku' },
+    { id: uid(), name: 'Poplatek platební brány', amount: '10', note: 'Zahrnuto v Kč na kus' },
+  ];
+  const r = [['R1', '180', '250', 'ano'], ['R2', '200', '260', 'ano'], ['R3', '150', '220', 'ano'], ['R4', '220', '300', 'ano'], ['R5', '190', '240', 'ano'], ['R6', '250', '320', 'ano'], ['R7', '120', '160', 'ne']];
+  p.resp = r.map(([label, ideal, max, target]) => ({ id: uid(), label, ideal, max, target }));
+  p.comps = [
+    { id: uid(), name: 'Budkárna.cz — Budka Klasik', price: '249', qty: '1', source: 'budkarna.cz (fiktivní)', date: '2026-10-12', diff: 'Hotová budka, nic se nestaví — chybí zážitek z tvoření.' },
+    { id: uid(), name: 'DřevoHraj — Rodinné balení 3 sad', price: '690', qty: '3', source: 'drevohraj.cz (fiktivní)', date: '2026-10-12', diff: 'Prodává jen po třech, potřebuje vlastní nářadí.' },
+  ];
+  p.position = 'podobna';
+  p.positionWhy = 'Jsme jen o málo levnější než konkurence, ale nabízíme sadu bez nářadí a návod pro děti. Konkurovat chceme zážitkem, ne slevou.';
+  p.pricing = {
+    price: '200', markup: '25', strategy: 'penetracni',
+    strategyWhy: 'Jsme nová značka. Cena pod konkurencí nám má pomoct získat první recenze a stálé zákazníky.',
+    strategyWhyNot: 'Prémiová cena by neseděla — nemáme značku. Skimming nedává smysl u jednoduchého produktu, který se snadno okopíruje.',
+    manipulations: 'Před Vánoci balíček 2 sady za 379 Kč, cena 199 Kč na e-shopu.',
+    defCosts: 'Cena 200 Kč pokrývá celkové náklady 160 Kč na kus při 2 000 kusech.',
+    defCustomers: 'Je blízko mediánu ideální ceny cílové skupiny (195 Kč) a pod maximem všech respondentů z cílové skupiny.',
+    defCompetition: 'Konkurence stojí 230–249 Kč za kus, jsme tedy mírně levnější.',
+  };
+  return p;
+}
+
+const S = { store: { own: null, demo: null, active: 'own' }, view: 'intro', step: 1, saveOk: true, savedAt: null };
+const P = () => S.store[S.store.active];
+
+function loadStore() {
+  try {
+    const raw = localStorage.getItem(STORE_KEY);
+    if (!raw) return;
+    const o = JSON.parse(raw);
+    if (o.own) S.store.own = sanitizeProject(o.own).project;
+    if (o.demo) S.store.demo = sanitizeProject(o.demo).project;
+    S.store.active = 'own';
+  } catch (e) { S.saveOk = false; }
+}
+let saveT = null;
+function scheduleSave() {
+  clearTimeout(saveT);
+  saveT = setTimeout(saveNow, 350);
+}
+function saveNow() {
+  try {
+    localStorage.setItem(STORE_KEY, JSON.stringify(S.store));
+    S.saveOk = true; S.savedAt = new Date();
+  } catch (e) { S.saveOk = false; }
+  updateSaveState();
+}
+
+// ---- formátování ----
+const nf = new Intl.NumberFormat('cs-CZ', { maximumFractionDigits: 2 });
+const nf0 = new Intl.NumberFormat('cs-CZ', { maximumFractionDigits: 0 });
+const nf1 = new Intl.NumberFormat('cs-CZ', { maximumFractionDigits: 1 });
+const nf4 = new Intl.NumberFormat('cs-CZ', { maximumFractionDigits: 4 });
+const MINUS = '−';
+function fmtN(n, f = nf) { if (n === null || n === undefined || !isFinite(n)) return '—'; const s = f.format(Math.abs(n)); return (n < 0 && Math.abs(n) > 1e-9 ? MINUS : '') + s; }
+function fmtKc(n) { return n === null || n === undefined ? '—' : fmtN(n) + ' Kč'; }
+function fmtSigned(n, suffix = ' Kč') { if (n === null || n === undefined) return '—'; return (n > 1e-9 ? '+' : '') + fmtN(n) + suffix; }
+function fmtPct(n) { return n === null || !isFinite(n) ? '—' : nf1.format(n) + ' %'; }
+function toInput(n) { if (n === null || n === undefined || !isFinite(n)) return ''; return String(Math.round(n * 10000) / 10000).replace('.', ','); }
+function fmtAxis(n) {
+  const a = Math.abs(n), s = n < 0 ? MINUS : '';
+  if (a >= 1e6) return s + nf1.format(a / 1e6) + ' mil.';
+  if (a >= 1e4) return s + nf0.format(a / 1e3) + ' tis.';
+  return s + nf.format(a);
+}
+
+function unitInfo(meta) {
+  const u = UNITS[meta.unit] || UNITS.jine;
+  const custom = (meta.unitCustom || '').trim();
+  const label = meta.unit === 'jine' ? (custom || 'jednotka') : u.label;
+  const short = meta.unit === 'jine' ? (custom || 'j.') : u.short;
+  const prec = u.fixedPrec || Number(meta.prec) || 1;
+  return { label, short, prec, integer: prec === 1 };
+}
+
+// ---- odvozené hodnoty ----
+function derive(p) {
+  const u = unitInfo(p.meta);
+  const fx = sumFixed(p.fixed), vx = sumVariable(p.variable);
+  const qP = parseNum(p.meta.qty);
+  let Q = null, qErr = '';
+  if (qP.state === 'invalid') qErr = 'Zadejte číslo, např. 2 000.';
+  else if (qP.state === 'ok') {
+    if (qP.value < 0) qErr = 'Prodej nemůže být záporný.';
+    else if (u.integer && Math.abs(qP.value - Math.round(qP.value)) > 1e-9) qErr = 'U této jednotky zadejte celé číslo.';
+    else Q = qP.value;
+  }
+  const pP = parseNum(p.pricing.price);
+  let Pr = null, pErr = '';
+  if (pP.state === 'invalid') pErr = 'Zadejte číslo, např. 249 nebo 249,90.';
+  else if (pP.state === 'ok') { if (pP.value < 0) pErr = 'Cena nemůže být záporná.'; else Pr = pP.value; }
+  const F = fx.invalid ? null : fx.value, v = vx.invalid ? null : vx.value;
+  const m = model(F, v, Q, Pr, u.prec);
+  const stats = respondentStats(p.resp, false);
+  const comps = p.comps.map(c => ({ c, u: competitorUnit(c) }));
+  const hints = {
+    P: pErr ? 'Opravte cenu v kroku 5.' : 'Doplňte cenu v kroku 5.',
+    Q: qErr ? 'Opravte plánovaný prodej v kroku 1.' : 'Doplňte plánovaný prodej v kroku 1.',
+    F: fx.invalid ? 'Opravte neplatné fixní náklady v kroku 2.' : 'Doplňte fixní náklady v kroku 2.',
+    v: vx.invalid ? 'Opravte neplatné variabilní náklady v kroku 2.' : 'Doplňte variabilní náklady v kroku 2.',
+  };
+  const miss = (...keys) => keys.filter(k => ({ P: Pr, Q, F, v }[k]) === null).map(k => hints[k]);
+  return { u, fx, vx, Q, qErr, P: Pr, pErr, F, v, m, stats, comps, miss };
+}
+
+function filled(s) { return String(s ?? '').trim() !== ''; }
+function stepStatus(p, d, i) {
+  switch (i) {
+    case 1: {
+      const keys = ['team', 'product', 'qty'];
+      const n = keys.filter(k => filled(p.meta[k])).length;
+      const ok = n === keys.length && d.Q !== null && d.Q > 0 && (p.meta.unit !== 'jine' || filled(p.meta.unitCustom));
+      return ok ? 'done' : (n ? 'progress' : 'empty');
+    }
+    case 2: {
+      const t = [...p.fixed, ...p.variable].some(r => filled(r.name) || filled(r.amount));
+      return d.fx.filled && d.vx.filled && !d.fx.invalid && !d.vx.invalid ? 'done' : (t ? 'progress' : 'empty');
+    }
+    case 3: {
+      const t = p.resp.some(r => filled(r.ideal) || filled(r.max));
+      return d.stats.complete >= 6 && !d.stats.errors.length ? 'done' : (t ? 'progress' : 'empty');
+    }
+    case 4: {
+      const t = p.noComp || filled(p.position) || filled(p.positionWhy) || p.comps.some(c => filled(c.name) || filled(c.price) || filled(c.diff));
+      const okComps = p.noComp ? filled(p.noCompReason) && filled(p.alternative) : d.comps.filter(x => x.u.state === 'ok' && filled(x.c.name)).length >= 2;
+      return okComps && filled(p.position) && filled(p.positionWhy) ? 'done' : (t ? 'progress' : 'empty');
+    }
+    case 5: {
+      const pr = p.pricing;
+      const t = filled(pr.price) || filled(pr.strategy) || filled(pr.strategyWhy) || filled(pr.defCosts);
+      return d.P !== null && filled(pr.strategy) && filled(pr.strategyWhy) && filled(pr.defCosts) && filled(pr.defCustomers) && filled(pr.defCompetition) ? 'done' : (t ? 'progress' : 'empty');
+    }
+    case 6: return p.plan ? (p.expTried ? 'done' : 'progress') : 'empty';
+    case 7: return [1, 2, 3, 4, 5].every(i => stepStatus(p, d, i) === 'done') ? 'done' : (p.plan ? 'progress' : 'empty');
+  }
+}
+const STATUS_TXT = { empty: 'Nevyplněno', progress: 'Rozpracováno', done: 'Hotovo' };
+
+// ---- import / sanitace ----
+function sanitizeProject(raw) {
+  const warn = [];
+  if (!raw || typeof raw !== 'object' || Array.isArray(raw)) throw new Error('Soubor neobsahuje projekt aplikace Za kolik?');
+  if (!raw.meta || typeof raw.meta !== 'object') throw new Error('V souboru chybí základní údaje o produktu (část „meta“).');
+  const b = blankProject();
+  const str = (x, max = 4000) => typeof x === 'string' ? x.slice(0, max) : (typeof x === 'number' && isFinite(x) ? String(x).replace('.', ',') : '');
+  const arr = (x, name) => { if (x === undefined) return []; if (!Array.isArray(x)) { warn.push(`Část „${name}“ nemá správný formát, byla vynechána.`); return []; } if (x.length > 300) warn.push(`Část „${name}“ byla zkrácena na 300 řádků.`); return x.slice(0, 300).filter(o => o && typeof o === 'object'); };
+  for (const k of Object.keys(b.meta)) b.meta[k] = str(raw.meta[k], k === 'desc' || k === 'qtyReason' ? 4000 : 300) || b.meta[k];
+  if (!UNITS[b.meta.unit]) { b.meta.unitCustom = b.meta.unit; b.meta.unit = 'jine'; }
+  if (!PRECS.some(([v]) => v === b.meta.prec)) b.meta.prec = '1';
+  if (Array.isArray(raw.fixed)) b.fixed = arr(raw.fixed, 'fixní náklady').map(r => ({ id: uid(), name: str(r.name, 200), amount: str(r.amount, 40), period: r.period === 'y' ? 'y' : 'm', note: str(r.note, 500) }));
+  if (Array.isArray(raw.variable)) b.variable = arr(raw.variable, 'variabilní náklady').map(r => ({ id: uid(), name: str(r.name, 200), amount: str(r.amount, 40), note: str(r.note, 500) }));
+  if (Array.isArray(raw.resp)) b.resp = arr(raw.resp, 'respondenti').map((r, i) => ({ id: uid(), label: str(r.label, 40) || 'R' + (i + 1), ideal: str(r.ideal, 40), max: str(r.max, 40), target: ['ano', 'ne', 'nevime'].includes(r.target) ? r.target : '' }));
+  if (Array.isArray(raw.comps)) b.comps = arr(raw.comps, 'konkurenti').map(r => ({ id: uid(), name: str(r.name, 200), price: str(r.price, 40), qty: str(r.qty, 40) || '1', source: str(r.source, 500), date: /^\d{4}-\d{2}-\d{2}$/.test(r.date || '') ? r.date : '', diff: str(r.diff, 1000) }));
+  // prázdné nákladové řádky (např. ze starší verze) nepřenášíme
+  const blankRow = r => !filled(r.name) && !filled(r.amount);
+  b.fixed = b.fixed.filter(r => !blankRow(r)); b.variable = b.variable.filter(r => !blankRow(r));
+  b.respOnlyTarget = false;
+  b.noComp = raw.noComp === true;
+  for (const k of ['noCompReason', 'alternative', 'positionWhy']) b[k] = str(raw[k]);
+  b.position = POSITIONS[raw.position] ? raw.position : '';
+  if (raw.pricing && typeof raw.pricing === 'object') for (const k of Object.keys(b.pricing)) b.pricing[k] = str(raw.pricing[k]);
+  if (!STRATS[b.pricing.strategy]) b.pricing.strategy = '';
+  const pl = raw.plan;
+  const items = (x, per) => Array.isArray(x) ? x.slice(0, 300).filter(r => r && typeof r === 'object').map(r => per ? { id: uid(), name: str(r.name, 200), amount: str(r.amount, 40), period: r.period === 'y' ? 'y' : 'm' } : { id: uid(), name: str(r.name, 200), amount: str(r.amount, 40) }) : null;
+  if (pl && typeof pl === 'object' && ['P', 'Q', 'F', 'v'].every(k => typeof pl[k] === 'number' && isFinite(pl[k]) && pl[k] >= 0) && Array.isArray(pl.fixed) && Array.isArray(pl.variable)) b.plan = { P: pl.P, Q: pl.Q, F: pl.F, v: pl.v, fixed: items(pl.fixed, true), variable: items(pl.variable, false), savedAt: str(pl.savedAt, 40) };
+  else if (pl) warn.push('Uložený plán pro porovnání nebyl platný, uložte ho prosím znovu v kroku 6.');
+  const ex = raw.exp;
+  if (b.plan && ex && typeof ex === 'object' && Array.isArray(ex.fixed) && Array.isArray(ex.variable)) b.exp = { mode: ex.mode === 'markup' ? 'markup' : 'manual', P: str(ex.P, 40), markup: str(ex.markup, 40), Q: str(ex.Q, 40), fixed: items(ex.fixed, true), variable: items(ex.variable, false) };
+  else b.exp = null;
+  b.expTried = raw.expTried === true;
+  b.isDemo = raw.isDemo === true;
+  if (!b.comps.length) b.comps = blankProject().comps;
+  // kontrola číselných polí
+  const bad = [];
+  if (parseNum(b.meta.qty).state === 'invalid') bad.push('plánovaný prodej');
+  if (b.fixed.some(r => parseNum(r.amount).state === 'invalid')) bad.push('fixní náklady');
+  if (b.variable.some(r => parseNum(r.amount).state === 'invalid')) bad.push('variabilní náklady');
+  if (b.resp.some(r => parseNum(r.ideal).state === 'invalid' || parseNum(r.max).state === 'invalid')) bad.push('odpovědi respondentů');
+  if (b.comps.some(r => parseNum(r.price).state === 'invalid' || parseNum(r.qty).state === 'invalid')) bad.push('ceny konkurence');
+  if (parseNum(b.pricing.price).state === 'invalid') bad.push('zvolená cena');
+  if (bad.length) warn.push('Neplatná čísla v těchto částech (jsou označená k opravě): ' + bad.join(', ') + '.');
+  return { project: b, warn };
+}
+function projectHasData(p) {
+  if (!p) return false;
+  const d = derive(p);
+  return [1, 2, 3, 4, 5, 6].some(i => stepStatus(p, d, i) !== 'empty');
+}
+
+// ===== Grafy (SVG, bez knihoven) =====
+const C1 = '#00968B', C2 = '#D7ABFD', CDARK = '#06403B', GRID = '#ECE8E2', AX = '#B9B3AA', LOSSF = '#F1E3FB', GAINF = '#DDF3EC';
+
+function niceStep(range, target) {
+  const raw = range / Math.max(1, target), mag = Math.pow(10, Math.floor(Math.log10(raw || 1)));
+  const n = raw / mag;
+  return (n <= 1 ? 1 : n <= 2 ? 2 : n <= 2.5 ? 2.5 : n <= 5 ? 5 : 10) * mag;
+}
+function ticks(min, max, target = 5) {
+  if (max === min) { max = min + 1; }
+  const st = niceStep(max - min, target);
+  const a = Math.floor(min / st) * st, b = Math.ceil(max / st) * st;
+  const out = []; for (let x = a; x <= b + st * 1e-6; x += st) out.push(Number(x.toFixed(10)));
+  return out;
+}
+// Sloupec se zaobleným koncem odvráceným od základny
+function barPath(x, yBase, yEnd, w, r = 4) {
+  const h = Math.abs(yEnd - yBase); r = Math.min(r, w / 2, h);
+  if (h < .5) return `M${x},${yBase}h${w}`;
+  if (yEnd < yBase) return `M${x},${yBase}V${yEnd + r}Q${x},${yEnd} ${x + r},${yEnd}H${x + w - r}Q${x + w},${yEnd} ${x + w},${yEnd + r}V${yBase}Z`;
+  return `M${x},${yBase}V${yEnd - r}Q${x},${yEnd} ${x + r},${yEnd}H${x + w - r}Q${x + w},${yEnd} ${x + w},${yEnd - r}V${yBase}Z`;
+}
+
+// 1) Sloupcový graf: plán vs experiment
+function chartBars(a, b) {
+  const W = 560, H = 300, L = 66, R = 12, T = 22, B = 40;
+  const cats = [['Tržby', 'revenue'], ['Celkové náklady', 'costTotal'], ['Zisk / ztráta', 'profit']];
+  const vals = cats.flatMap(([, k]) => [a[k], b[k]]).filter(v => v !== null);
+  let lo = Math.min(0, ...vals), hi = Math.max(0, ...vals);
+  if (hi === lo) hi = lo + 1;
+  const tk = ticks(lo, hi, 5); lo = tk[0]; hi = tk[tk.length - 1];
+  const y = v => T + (hi - v) / (hi - lo) * (H - T - B);
+  const gw = (W - L - R) / cats.length, bw = Math.min(46, gw * .3);
+  let s = `<svg class="ch" viewBox="0 0 ${W} ${H}" role="img" aria-label="Sloupcový graf: tržby, celkové náklady a zisk plánu a nové varianty v Kč za rok">`;
+  for (const t of tk) s += `<line x1="${L}" x2="${W - R}" y1="${y(t)}" y2="${y(t)}" stroke="${t === 0 ? AX : GRID}" stroke-width="${t === 0 ? 1.5 : 1}"/><text class="axt" x="${L - 8}" y="${y(t) + 4}" text-anchor="end">${fmtAxis(t)}</text>`;
+  s += `<text class="axt" x="${L - 8}" y="10" text-anchor="end">Kč za rok</text>`;
+  cats.forEach(([name, k], i) => {
+    const cx = L + gw * i + gw / 2;
+    [[a[k], C1, 'Náš plán', -1], [b[k], C2, 'Nová varianta', 1]].forEach(([v, col, ser, side]) => {
+      if (v === null) return;
+      const x = cx + (side < 0 ? -bw - 2 : 2);
+      const tip = `${ser} · ${name}\n${fmtKc(v)}`;
+      s += `<path d="${barPath(x, y(0), y(v), bw)}" fill="${col}" data-tip="${esc(tip)}"/>`;
+      const ly = v >= 0 ? y(v) - 6 : y(v) + 14;
+      s += `<text x="${x + bw / 2}" y="${ly}" text-anchor="middle" class="lbl" style="font-size:12px">${fmtAxis(v)}</text>`;
+    });
+    s += `<text x="${cx}" y="${H - B + 20}" text-anchor="middle" style="font-size:12px;font-weight:600;fill:#16302D">${name}</text>`;
+  });
+  return s + '</svg>';
+}
+
+// 2) Graf tržeb a nákladů podle množství (bod zvratu)
+function chartCVP(m, prec, unitShort, extra = {}) {
+  const { F, v, P, Q } = m;
+  if ([F, v, P, Q].some(x => x === null)) return '';
+  const W = 560, H = 320, L = 66, R = 16, T = 22, B = 46;
+  let qmax = Math.max(Q * 1.6, 10 * prec, 10);
+  if (m.beRaw && isFinite(m.beRaw)) qmax = Math.max(qmax, m.beRaw * 1.5);
+  if (extra.planQ) qmax = Math.max(qmax, extra.planQ * 1.2);
+  const xt = ticks(0, qmax, 5); qmax = xt[xt.length - 1];
+  const ymaxRaw = Math.max(P * qmax, F + v * qmax, 1);
+  const yt = ticks(0, ymaxRaw, 5); const ymax = yt[yt.length - 1];
+  const x = q => L + q / qmax * (W - L - R), y = val => T + (ymax - val) / ymax * (H - T - B);
+  const rev = q => P * q, cost = q => F + v * q;
+  let s = `<svg class="ch" viewBox="0 0 ${W} ${H}" role="img" aria-label="Spojnicový graf tržeb a celkových nákladů podle prodaného množství s bodem zvratu" data-cvp='${JSON.stringify({ F, v, P, qmax, ymax, L, R, T, B, W, H, u: unitShort })}'>`;
+  for (const t of yt) s += `<line x1="${L}" x2="${W - R}" y1="${y(t)}" y2="${y(t)}" stroke="${t === 0 ? AX : GRID}"/><text class="axt" x="${L - 8}" y="${y(t) + 4}" text-anchor="end">${fmtAxis(t)}</text>`;
+  for (const t of xt) s += `<line x1="${x(t)}" x2="${x(t)}" y1="${H - B}" y2="${H - B + 4}" stroke="${AX}"/><text class="axt" x="${x(t)}" y="${H - B + 17}" text-anchor="middle">${fmtAxis(t)}</text>`;
+  s += `<text class="axt" x="${L - 8}" y="10" text-anchor="end">Kč za rok</text>`;
+  s += `<text class="axt" x="${(L + W - R) / 2}" y="${H - 6}" text-anchor="middle">Prodané množství za rok (${esc(unitShort)})</text>`;
+  // oblasti ztráty a zisku
+  const poly = (q0, q1) => `${x(q0)},${y(rev(q0))} ${x(q1)},${y(rev(q1))} ${x(q1)},${y(cost(q1))} ${x(q0)},${y(cost(q0))}`;
+  if (P > v && m.beRaw !== undefined && m.beRaw < qmax) {
+    if (m.beRaw > 0) s += `<polygon points="${poly(0, m.beRaw)}" fill="${LOSSF}"/>`;
+    s += `<polygon points="${poly(Math.max(0, m.beRaw), qmax)}" fill="${GAINF}"/>`;
+  } else s += `<polygon points="${poly(0, qmax)}" fill="${LOSSF}"/>`;
+  // fixní náklady (vodorovně)
+  if (F > 0) {
+    s += `<line x1="${x(0)}" y1="${y(F)}" x2="${x(qmax)}" y2="${y(F)}" stroke="#46605C" stroke-width="2" stroke-dasharray="2 4" data-tip="${esc('Fixní náklady: ' + fmtKc(F) + ' za rok\nPlatíte je při jakémkoli prodeji.')}"/>`;
+    s += `<text x="${W - R - 4}" y="${y(F) + 15}" text-anchor="end" class="lbl" style="fill:#46605C">Fixní náklady ${fmtAxis(F)}</text>`;
+  }
+  // přímky
+  s += `<line x1="${x(0)}" y1="${y(cost(0))}" x2="${x(qmax)}" y2="${y(cost(qmax))}" stroke="${C2}" stroke-width="3.5" stroke-dasharray="8 4"/>`;
+  s += `<line x1="${x(0)}" y1="${y(rev(0))}" x2="${x(qmax)}" y2="${y(rev(qmax))}" stroke="${C1}" stroke-width="2.5"/>`;
+  // přímé popisky na konci čar
+  const ry = y(rev(qmax)), cy = y(cost(qmax));
+  const sep = Math.abs(ry - cy) < 14 ? (ry < cy ? -7 : 7) : 0;
+  s += `<text x="${W - R - 4}" y="${ry - 6 + sep}" text-anchor="end" class="lbl" style="fill:${C1}">Tržby</text>`;
+  s += `<text x="${W - R - 4}" y="${cy + 14 - sep}" text-anchor="end" class="lbl" style="fill:#06403B">Celkové náklady (fixní + variabilní)</text>`;
+  // plánovaný objem (pokud se liší)
+  if (extra.planQ !== undefined && extra.planQ !== Q && extra.planQ <= qmax) {
+    s += `<line x1="${x(extra.planQ)}" x2="${x(extra.planQ)}" y1="${T}" y2="${H - B}" stroke="${AX}" stroke-dasharray="2 4"/><text x="${x(extra.planQ) + 4}" y="${T + 22}" class="axt">plán</text>`;
+  }
+  // aktuální objem
+  s += `<line x1="${x(Q)}" x2="${x(Q)}" y1="${T}" y2="${H - B}" stroke="${CDARK}" stroke-width="1.5"/>`;
+  const qAnchor = x(Q) > W - 150 ? 'end' : 'start', qdx = qAnchor === 'end' ? -5 : 5;
+  s += `<text x="${x(Q) + qdx}" y="${T + 8}" text-anchor="${qAnchor}" class="lbl" style="font-size:11px">${esc(extra.qLabel || 'Objem')}: ${fmtN(Q)} ${esc(unitShort)}</text>`;
+  // bod zvratu
+  if (m.beState === 'ok' && m.beRaw <= qmax) {
+    const bx = x(m.beRaw), by = y(rev(m.beRaw));
+    s += `<circle cx="${bx}" cy="${by}" r="6" fill="#EDD976" stroke="${CDARK}" stroke-width="2" data-tip="${esc('Bod zvratu: ' + fmtN(m.be) + ' ' + unitShort + '\nTržby = náklady ≈ ' + fmtKc(P * m.beRaw))}"/>`;
+    const a = bx > W - 170 ? 'end' : 'start', dx = a === 'end' ? -10 : 10;
+    s += `<text x="${bx + dx}" y="${by + 20}" text-anchor="${a}" class="lbl">Bod zvratu: ${fmtN(m.be)} ${esc(unitShort)}</text>`;
+  }
+  s += `<line class="xh" x1="0" x2="0" y1="${T}" y2="${H - B}" stroke="${CDARK}" stroke-opacity=".35" visibility="hidden"/>`;
+  s += `<rect class="hit" x="${L}" y="${T}" width="${W - L - R}" height="${H - T - B}" fill="transparent"/>`;
+  return s + '</svg>';
+}
+
+// 3) Zákaznická sonda — činkový graf (ideální → maximální cena)
+function chartResp(p, stats, refs = []) {
+  const rows = [];
+  p.resp.forEach((r, i) => {
+    const a = parseNum(r.ideal), b = parseNum(r.max);
+    if (a.state === 'ok' && b.state === 'ok' && a.value >= 0 && b.value >= a.value) {
+      rows.push({ label: r.label || ('R' + (i + 1)), ideal: a.value, max: b.value, target: r.target, used: stats.used.some(u => u.i === i) });
+    }
+  });
+  if (!rows.length) return '<p class="hint">Graf se zobrazí, jakmile vyplníte první úplnou odpověď.</p>';
+  const W = 560, rowH = 26, T = 34, B = 34, L = 96, R = 18, H = T + B + rows.length * rowH;
+  const allx = rows.flatMap(r => [r.ideal, r.max]).concat(refs.map(r => r.v).filter(v => v !== null));
+  const xt = ticks(0, Math.max(...allx, 1) * 1.05, 5), xmax = xt[xt.length - 1];
+  const x = v => L + v / xmax * (W - L - R);
+  let s = `<svg class="ch" viewBox="0 0 ${W} ${H}" role="img" aria-label="Graf odpovědí respondentů: ideální a maximální cena v Kč">`;
+  for (const t of xt) s += `<line x1="${x(t)}" x2="${x(t)}" y1="${T - 6}" y2="${H - B}" stroke="${GRID}"/><text class="axt" x="${x(t)}" y="${H - B + 16}" text-anchor="middle">${fmtAxis(t)}</text>`;
+  s += `<text class="axt" x="${(L + W - R) / 2}" y="${H - 4}" text-anchor="middle">Cena za jednotku (Kč)</text>`;
+  refs.forEach((r, k) => {
+    if (r.v === null) return;
+    s += `<line x1="${x(r.v)}" x2="${x(r.v)}" y1="${T - 10}" y2="${H - B}" stroke="${r.col}" stroke-width="2" ${r.dash ? 'stroke-dasharray="5 4"' : ''}/>`;
+    s += `<text x="${x(r.v)}" y="${T - 14 - k * 12}" text-anchor="middle" class="lbl" style="font-size:12px;fill:${r.col}">${esc(r.name)} ${fmtN(r.v)}</text>`;
+  });
+  rows.forEach((r, i) => {
+    const cy = T + i * rowH + rowH / 2, op = r.used ? 1 : .35;
+    const outside = false;
+    s += `<text x="${L - 10}" y="${cy + 4}" text-anchor="end" style="font-size:11px;fill:#46605C;font-weight:${outside ? 700 : 500}">${esc(r.label.slice(0, 10))}${outside ? ' ⚑' : ''}</text>`;
+    s += `<g opacity="${op}"><line x1="${x(r.ideal)}" x2="${x(r.max)}" y1="${cy}" y2="${cy}" stroke="#B9B3AA" stroke-width="2"/>`;
+    const tip = `${r.label}\nideální ${fmtKc(r.ideal)} · maximální ${fmtKc(r.max)}`;
+    s += `<circle cx="${x(r.ideal)}" cy="${cy}" r="6" fill="${C1}" stroke="#fff" stroke-width="2" data-tip="${esc(tip)}"/>`;
+    s += `<circle cx="${x(r.max)}" cy="${cy}" r="6" fill="${C2}" stroke="#06403B" stroke-width="1.5" data-tip="${esc(tip)}"/></g>`;
+  });
+  return s + '</svg>';
+}
+
+// 4) Cenová mapa pro krok 5
+function chartPriceMap(d) {
+  const W = 600, L = 110, R = 22, T = 30, rowH = 54;
+  const rowsDef = [];
+  const costPts = [];
+  if (d.v !== null) costPts.push({ v: d.v, name: 'Variabilní náklady', short: 'var.', col: CDARK, shape: 'sq' });
+  if (d.m.unitCost !== null) costPts.push({ v: d.m.unitCost, name: 'Celkové náklady na jednotku', short: 'celk.', col: CDARK, shape: 'sq' });
+  rowsDef.push(['Náklady', costPts]);
+  const st = d.stats, cust = [];
+  if (st.n) {
+    cust.push({ v: st.idealMedian, name: 'Medián ideální ceny', short: 'ideál', col: C1, shape: 'c' });
+    cust.push({ v: st.maxMedian, name: 'Medián maximální ceny', short: 'max.', col: C2, shape: 'c' });
+  }
+  rowsDef.push(['Zákazníci', cust, st.n ? [st.idealMedian, st.maxMedian] : null]);
+  const comp = d.comps.filter(x => x.u.state === 'ok').map((x, i) => ({ v: x.u.value, name: x.c.name || 'Konkurent ' + (i + 1), short: 'K' + (i + 1), col: '#46605C', shape: 'd' }));
+  rowsDef.push(['Konkurence', comp]);
+  const all = rowsDef.flatMap(r => r[1].map(p => p.v)).concat(d.P !== null ? [d.P] : []);
+  if (!all.length) return '<p class="hint">Mapa se zobrazí, jakmile budou k dispozici náklady, odpovědi zákazníků nebo ceny konkurence.</p>';
+  const H = T + rowsDef.length * rowH + 34;
+  const xt = ticks(0, Math.max(...all) * 1.08, 6), xmax = xt[xt.length - 1];
+  const x = v => L + v / xmax * (W - L - R);
+  let s = `<svg class="ch" viewBox="0 0 ${W} ${H}" role="img" aria-label="Cenová mapa: náklady, zákaznická sonda a konkurence na jedné ose v Kč za jednotku">`;
+  for (const t of xt) s += `<line x1="${x(t)}" x2="${x(t)}" y1="${T - 4}" y2="${H - 30}" stroke="${GRID}"/><text class="axt" x="${x(t)}" y="${H - 14}" text-anchor="middle">${fmtAxis(t)}</text>`;
+  s += `<text class="axt" x="${W - R}" y="${H - 1}" text-anchor="end">Kč za ${esc(d.u.label)}</text>`;
+  rowsDef.forEach(([name, pts, range], i) => {
+    const cy = T + i * rowH + rowH / 2;
+    s += `<text x="${L - 14}" y="${cy + 4}" text-anchor="end" style="font-size:12px;font-weight:700;fill:#06403B">${name}</text>`;
+    if (!pts.length) { s += `<text x="${L + 4}" y="${cy + 4}" class="axt">zatím bez údajů</text>`; return; }
+    if (range) s += `<rect x="${x(range[0])}" y="${cy - 5}" width="${Math.max(2, x(range[1]) - x(range[0]))}" height="10" rx="5" fill="#EFE0FE"/>`;
+    const sorted = [...pts].sort((a, b) => a.v - b.v);
+    let lastX = -99, flip = false;
+    sorted.forEach(p => {
+      const px = x(p.v);
+      const tip = `${p.name}\n${fmtKc(p.v)}`;
+      if (p.shape === 'sq') s += `<rect x="${px - 6}" y="${cy - 6}" width="12" height="12" rx="2" fill="${p.col}" data-tip="${esc(tip)}"/>`;
+      else if (p.shape === 'd') s += `<path d="M${px},${cy - 8}L${px + 8},${cy}L${px},${cy + 8}L${px - 8},${cy}Z" fill="${p.col}" stroke="#fff" stroke-width="1.5" data-tip="${esc(tip)}"/>`;
+      else s += `<circle cx="${px}" cy="${cy}" r="7" fill="${p.col}" stroke="${p.col === C2 ? '#06403B' : '#fff'}" stroke-width="${p.col === C2 ? 1.5 : 2}" data-tip="${esc(tip)}"/>`;
+      flip = px - lastX < 46 ? !flip : false; lastX = px;
+      s += `<text x="${px}" y="${flip ? cy + 22 : cy - 12}" text-anchor="middle" style="font-size:12px;fill:#46605C">${esc(p.short)}</text>`;
+    });
+  });
+  if (d.P !== null) {
+    s += `<line x1="${x(d.P)}" x2="${x(d.P)}" y1="${T - 8}" y2="${H - 30}" stroke="#06403B" stroke-width="2.5"/>`;
+    s += `<rect x="${x(d.P) - 52}" y="${T - 28}" width="104" height="20" rx="10" fill="#EDD976"/><text x="${x(d.P)}" y="${T - 14}" text-anchor="middle" class="lbl" style="fill:#06403B">Naše cena ${fmtN(d.P)}</text>`;
+  }
+  return s + '</svg>';
+}
+
+// ===== Vykreslení kroků =====
+const STEPS = ['Náš produkt', 'Naše náklady', 'Naši zákazníci', 'Naše konkurence', 'Naše cena', 'Ekonomické výsledky', 'Shrnutí'];
+
+function listOf(p, list) { return list === 'xfixed' ? p.exp.fixed : list === 'xvariable' ? p.exp.variable : p[list]; }
+function getPath(p, path) {
+  if (path.includes(':')) { const [list, id, key] = path.split(':'); const it = listOf(p, list).find(r => r.id === id); return it ? it[key] : ''; }
+  return path.split('.').reduce((o, k) => (o == null ? o : o[k]), p);
+}
+function setPath(p, path, val) {
+  if (path.includes(':')) { const [list, id, key] = path.split(':'); const it = listOf(p, list).find(r => r.id === id); if (it) it[key] = val; return; }
+  const ks = path.split('.'); let o = p; for (let i = 0; i < ks.length - 1; i++) o = o[ks[i]]; o[ks[ks.length - 1]] = val;
+}
+function numBad(val, opts = {}) {
+  const r = parseNum(val);
+  if (r.state === 'invalid') return 'Zadejte číslo (desetinná čárka je v pořádku).';
+  if (r.state === 'ok' && r.value < 0 && !opts.neg) return 'Hodnota nemůže být záporná.';
+  return '';
+}
+function inp(path, o = {}) {
+  const p = P(), val = getPath(p, path) ?? '';
+  const bad = o.num ? numBad(val, o) : '';
+  const attrs = `data-bind="${path}" ${o.num ? `data-num="1" inputmode="decimal" ${o.neg ? 'data-neg="1"' : ''}` : ''} ${o.rerender ? 'data-rerender="1"' : ''} placeholder="${esc(o.ph || '')}" aria-label="${esc(o.aria || o.ph || '')}" ${o.id ? `id="${o.id}"` : ''}`;
+  if (o.area) return `<textarea ${attrs} rows="${o.rows || 3}">${esc(val)}</textarea>`;
+  return `<input type="${o.type || 'text'}" class="${o.num ? 'num' : ''} ${bad ? 'bad' : ''}" value="${esc(val)}" ${attrs} autocomplete="off">`;
+}
+function fld(label, path, o = {}) {
+  const id = 'f_' + path.replace(/[^a-z0-9]/gi, '_');
+  const control = o.suffix ? `<div class="withsuf">${inp(path, { ...o, id })}<span class="suf">${o.suffix}</span></div>` : inp(path, { ...o, id });
+  return `<div class="f"><label for="${id}">${label}${o.optional ? ' <span class="opt">(volitelné)</span>' : ''}</label>${control}${o.num ? `<div class="errmsg" data-err="${path}"></div>` : ''}${o.hint ? `<div class="hint">${o.hint}</div>` : ''}</div>`;
+}
+function sel(path, options, o = {}) {
+  const val = getPath(P(), path);
+  return `<select data-bind="${path}" ${o.rerender ? 'data-rerender="1"' : ''} aria-label="${esc(o.aria || '')}" ${o.id ? `id="${o.id}"` : ''}>${options.map(([v, l]) => `<option value="${v}" ${v === val ? 'selected' : ''}>${l}</option>`).join('')}</select>`;
+}
+function head(i, lead) {
+  return `<div class="stephead"><div class="kicker">Krok ${i} ze 7</div><h2>${STEPS[i - 1]}</h2>${lead ? `<p>${lead}</p>` : ''}</div>`;
+}
+function navRow(i) {
+  return `<div class="navrow">${i > 1 ? `<button class="btn ghost" data-act="go" data-step="${i - 1}">← ${STEPS[i - 2]}</button>` : '<span></span>'}${i < 7 ? `<button class="btn" data-act="go" data-step="${i + 1}">Pokračovat: ${STEPS[i]} →</button>` : ''}</div>`;
+}
+
+// ---------- Krok 1 ----------
+function step1() {
+  const p = P(), u = unitInfo(p.meta);
+  const precCtl = UNITS[p.meta.unit].fixedPrec ? '' : `<div class="f"><label for="f_prec">Přesnost jednotky</label>${sel('meta.prec', PRECS, { id: 'f_prec', aria: 'Přesnost jednotky' })}<div class="hint">Na tuto přesnost se zaokrouhluje bod zvratu (vždy nahoru).</div></div>`;
+  return head(1, 'Krátce a konkrétně: co prodáváte, v jaké jednotce a kolik toho prodáte. Všechno další se bude počítat na tuto jednotku.') + `
+  <div class="card">
+    <div class="grid2">
+      ${fld('Název týmu nebo firmy', 'meta.team', { ph: 'např. Datlová dílna' })}
+      ${fld('Název produktu', 'meta.product', { ph: 'např. Budka do kapsy' })}
+    </div>
+    <div class="grid2">
+      <div class="f"><label for="f_unit">Prodejní jednotka</label>${sel('meta.unit', Object.entries(UNITS).map(([k, v]) => [k, k === 'jine' ? 'jiná…' : v.label]), { rerender: true, id: 'f_unit', aria: 'Prodejní jednotka' })}
+        ${p.meta.unit === 'jine' ? inp('meta.unitCustom', { ph: 'např. lekce, porce, licence', rerender: false, aria: 'Vlastní jednotka' }) : ''}
+        <div class="hint">Např. kus, balení, hodina služby, měsíční předplatné.</div></div>
+      ${precCtl || '<div></div>'}
+    </div>
+    ${p.meta.unit === 'predplatne' ? `<div class="info pur" style="margin-bottom:14px"><b>Předplatné:</b> počet jednotek znamená prodaná předplatitelská období, ne automaticky počet zákazníků. 100 zákazníků po 12 měsících = 1 200 prodaných měsíčních předplatných.</div>` : ''}
+    ${fld('Plánovaný roční prodej', 'meta.qty', { num: true, suffix: `<span data-out="unitshort">${esc(u.short)}</span> za rok`, ph: 'např. 2 000', hint: 'Vezměte odhad poptávky z předchozí části týmové práce. Kolik jednotek skutečně plánujete prodat za první rok? Velikost cílové skupiny ještě není počet objednávek.' })}
+  </div>
+  <div class="info" style="margin-top:18px"><b>Jak kalkulace funguje</b>
+    <ul style="margin:6px 0 0;padding-left:18px">
+      <li><b>Jeden produkt, jeden rok.</b> Všechno počítáme pro váš produkt a první rok prodeje.</li>
+      <li><b>DPH neřešíme.</b> Berte to tak, že vaše firma není plátcem DPH. Cena, kterou zákazník zaplatí, je celá vaše tržba. Ceny konkurence i odpovědi zákazníků proto zadávejte tak, jak je vidíte nebo slyšíte.</li>
+      <li><b>Poplatky jsou náklad.</b> Když si z každé platby něco vezme platební brána (třeba při platbě kartou), zadejte to v kroku 2 jako variabilní náklad.</li>
+      <li><b>Všechno v korunách a v dnešních cenách.</b> Nepřipočítávejte inflaci ani budoucí zdražení.</li>
+    </ul></div>
+  ${navRow(1)}`;
+}
+
+// ---------- Krok 2 ----------
+function step2() {
+  const p = P(), u = unitInfo(p.meta);
+  const fixedRows = p.fixed.map(r => `
+    <div class="row fixed">
+      <div class="nm">${inp(`fixed:${r.id}:name`, { ph: 'Název položky', aria: 'Název fixní položky' })}</div>
+      <button class="iconbtn" data-act="del" data-list="fixed" data-id="${r.id}" title="Odstranit položku" aria-label="Odstranit položku">✕</button>
+      <div><div class="withsuf">${inp(`fixed:${r.id}:amount`, { num: true, ph: 'Částka', aria: 'Částka v Kč' })}<span class="suf">Kč</span></div><div class="sub" data-out="fy" data-id="${r.id}"></div></div>
+      <div>${sel(`fixed:${r.id}:period`, [['m', 'měsíčně'], ['y', 'ročně']], { aria: 'Období' })}</div>
+    </div>`).join('');
+  const varRows = p.variable.map(r => `
+    <div class="row var">
+      <div>${inp(`variable:${r.id}:name`, { ph: 'Název položky', aria: 'Název variabilní položky' })}</div>
+      <button class="iconbtn" data-act="del" data-list="variable" data-id="${r.id}" title="Odstranit položku" aria-label="Odstranit položku">✕</button>
+      <div class="amt"><div class="withsuf">${inp(`variable:${r.id}:amount`, { num: true, ph: 'Částka', aria: 'Kč na jednotku' })}<span class="suf">Kč / ${esc(u.short)}</span></div></div>
+    </div>`).join('');
+  const chips = (list, names) => {
+    const used = new Set(p[list].map(r => (r.name || '').trim().toLowerCase()));
+    return `<div class="lbl" style="margin-top:12px">Vyberte, co se vás týká:</div><div class="chips">${names.map(c => used.has(c.toLowerCase())
+      ? `<span class="chip on" title="Už je v seznamu">✓ ${esc(c)}</span>`
+      : `<button class="chip" data-act="addrow" data-list="${list}" data-name="${esc(c)}">+ ${esc(c)}</button>`).join('')}</div>`;
+  };
+  const empty = txt => `<p class="hint" style="padding:10px 2px">${txt}</p>`;
+  return head(2, 'Rozdělte náklady podle toho, jak se chovají, když prodáte víc nebo míň.') + `
+  <div class="grid2">
+    <div class="card">
+      <h3>Fixní náklady</h3>
+      <p class="hint">Náklady, které v rámci našeho modelu platíte i tehdy, když nic neprodáte. Při větším prodeji se rozpočítají mezi více jednotek.</p>
+      ${chips('fixed', FIXED_EX.map(x => x[0]))}
+      <div class="rows" style="margin-top:12px">${fixedRows || empty('Zatím žádná položka. Vyberte z nabídky výše nebo přidejte vlastní.')}</div>
+      <button class="btn soft sm" data-act="addrow" data-list="fixed" style="margin-top:10px">+ Přidat vlastní fixní náklad</button>
+      <p class="hint" style="margin-top:8px">Měsíční částky přepočítáme na roční (× 12). Nájem a odpisy uvádějte jako samostatné položky.</p>
+    </div>
+    <div class="card">
+      <h3>Variabilní náklady</h3>
+      <p class="hint">Náklady, které v modelu vzniknou s každou další prodanou jednotkou (${esc(u.label)}).</p>
+      ${chips('variable', VAR_EX)}
+      <div class="rows" style="margin-top:12px">${varRows || empty('Zatím žádná položka. Vyberte z nabídky výše nebo přidejte vlastní.')}</div>
+      <button class="btn soft sm" data-act="addrow" data-list="variable" style="margin-top:10px">+ Přidat vlastní variabilní náklad</button>
+    </div>
+  </div>
+  <div class="info yel" style="margin-top:18px">Položku zařaďte podle toho, jak u vaší firmy vzniká. Například mzda může být fixní i variabilní. Stejný náklad nezapočítejte dvakrát.</div>
+  <div class="card" style="margin-top:18px"><h3 style="margin-bottom:10px">Co z toho vychází</h3><div data-out="costs"></div></div>
+  <div class="hanka"><div class="who">Poznámka od Hanky</div>Vlastní práci zdarma můžete odpracovat. V kalkulaci ji ale zkuste ocenit. Budoucí vy vám poděkuje.</div>
+  ${navRow(2)}`;
+}
+function outCosts(d) {
+  const p = P(), u = d.u;
+  const tile = (k, v, miss, hl) => `<div class="tile ${hl ? 'hl' : ''}"><div class="k">${k}</div><div class="v">${v}</div>${miss ? `<div class="miss">${miss}</div>` : ''}</div>`;
+  const fpu = d.m.fixedPerUnit, uc = d.m.unitCost;
+  const ucMiss = d.Q === 0 ? 'Při nulovém prodeji nelze určit.' : d.miss('F', 'v', 'Q')[0];
+  let s = `<div class="tiles">
+    ${tile('Fixní náklady za rok', d.F !== null ? fmtKc(d.F) : '—', d.F === null ? d.miss('F')[0] : '')}
+    ${tile(`Variabilní náklady na ${esc(u.label)}`, d.v !== null ? fmtKc(d.v) : '—', d.v === null ? d.miss('v')[0] : '')}
+    ${tile(`Fixní náklady na ${esc(u.label)} při plánovaném prodeji`, fpu !== null ? fmtKc(fpu) : '—', fpu === null ? (d.Q === 0 ? 'Při nulovém prodeji nelze určit.' : d.miss('F', 'Q')[0]) : '')}
+    ${tile(`Celkové náklady na ${esc(u.label)}`, uc !== null ? fmtKc(uc) : '—', uc === null ? ucMiss : '', true)}
+  </div>`;
+  const fixedLines = p.fixed.filter(r => parseNum(r.amount).state === 'ok').map(r => {
+    const a = parseNum(r.amount).value; return `${esc(r.name || 'bez názvu')}: ${r.period === 'm' ? `${fmtN(a)} × 12 = ${fmtN(a * 12)}` : fmtN(a)} Kč`;
+  });
+  s += `<details class="how"><summary>Jak se to počítá?</summary><div>
+    <p><b>Fixní náklady za rok (F)</b> = součet ročních částek</p>
+    <div class="formula">${fixedLines.length ? fixedLines.join('<br>') + `<br>F = ${fmtKc(d.F)}` : 'zatím žádné vyplněné položky'}</div>
+    <p><b>Variabilní náklady na jednotku (v)</b> = součet položek na jednotku</p>
+    <div class="formula">v = ${p.variable.filter(r => parseNum(r.amount).state === 'ok').map(r => fmtN(parseNum(r.amount).value)).join(' + ') || '—'} = ${fmtKc(d.v)}</div>
+    <p><b>Celkové náklady na jednotku</b> = F / Q + v, kde Q je plánovaný roční prodej</p>
+    <div class="formula">${d.F !== null && d.v !== null && d.Q ? `${fmtN(d.F)} / ${fmtN(d.Q)} + ${fmtN(d.v)} = ${fmtN(d.F / d.Q)} + ${fmtN(d.v)} = ${fmtKc(uc)}` : 'doplňte F, v a Q > 0'}</div>
+    <p class="hint">Mezivýpočty nezaokrouhlujeme, zaokrouhlené je jen zobrazení na haléře.</p>
+  </div></details>`;
+  return s;
+}
+
+// ---------- Krok 3 ----------
+function step3() {
+  const p = P();
+  const rows = p.resp.map((r, i) => `
+    <div class="row resp" data-rowid="${r.id}">
+      <div class="lab">${inp(`resp:${r.id}:label`, { ph: 'R' + (i + 1), aria: 'Označení respondenta' })}</div>
+      <div class="cid"><span class="mlbl">ideální cena</span>${inp(`resp:${r.id}:ideal`, { num: true, ph: 'ideální Kč', aria: 'Ideální cena' })}</div>
+      <div class="cmx"><span class="mlbl">maximální cena</span>${inp(`resp:${r.id}:max`, { num: true, ph: 'maximální Kč', aria: 'Maximální cena' })}</div>
+      <button class="iconbtn" data-act="del" data-list="resp" data-id="${r.id}" title="Odstranit řádek" aria-label="Odstranit řádek">✕</button>
+      <div class="rowmsg" data-out="resperr" data-id="${r.id}"></div>
+    </div>`).join('');
+  return head(3, 'Malá cenová sonda: ideální a maximální cena od alespoň šesti lidí.') + `
+  <div class="info"><b>Jak se ptát:</b> Ptejte se lidí z vaší cílové skupiny. Všem představte stejný produkt, stejnou prodejní jednotku a stejné služby. Pak se zeptejte na cenu, která jim připadá ideální, a na nejvyšší cenu, kterou by ještě byli ochotni zaplatit.</div>
+  <div class="card" style="margin-top:18px">
+    <div class="rowhead resp"><span>Respondent</span><span>Ideální cena (Kč)</span><span>Maximální cena (Kč)</span><span></span></div>
+    <div class="rows">${rows}</div>
+    <div style="margin-top:12px;display:flex;gap:10px;flex-wrap:wrap;align-items:center"><button class="btn soft sm" data-act="addrow" data-list="resp">+ Přidat respondenta</button></div>
+  </div>
+  <div class="card" style="margin-top:18px"><h3 style="margin-bottom:10px">Výsledky sondy</h3><div data-out="respstats"></div></div>
+  ${navRow(3)}`;
+}
+function outRespStats(d) {
+  const st = d.stats;
+  let s = `<div class="tiles">
+    <div class="tile"><div class="k">Úplné odpovědi</div><div class="v">${st.complete}${st.n !== st.complete ? ` <small>(počítáme ${st.n})</small>` : ''}</div>${st.complete < 6 ? `<div class="miss">Potřebujete alespoň 6, chybí ${6 - st.complete}.</div>` : ''}</div>
+    <div class="tile"><div class="k">Ideální cena — průměr / medián</div><div class="v">${st.n ? fmtN(st.idealMean) + ' / ' + fmtN(st.idealMedian) : '—'} <small>Kč</small></div></div>
+    <div class="tile"><div class="k">Maximální cena — průměr / medián</div><div class="v">${st.n ? fmtN(st.maxMean) + ' / ' + fmtN(st.maxMedian) : '—'} <small>Kč</small></div></div>
+  </div>`;
+  const w = [];
+  const ml = st.errors.filter(e => e.kind === 'maxlow').length, pa = st.partial, iv = st.invalid;
+  if (ml) w.push(`<div class="info bad"><b>${ml} ${ml === 1 ? 'řádek má' : 'řádky mají'} maximální cenu nižší než ideální.</b> Zkontrolujte, jestli se údaje nepřehodily. Do výpočtu je nezahrnujeme.</div>`);
+  if (pa) w.push(`<div class="info warn"><b>${pa} ${pa === 1 ? 'odpověď je neúplná' : 'odpovědi jsou neúplné'}</b> (chybí ideální nebo maximální cena). Počítáme jen úplné dvojice.</div>`);
+  if (iv) w.push(`<div class="info bad"><b>${iv} ${iv === 1 ? 'řádek obsahuje' : 'řádky obsahují'} neplatné číslo.</b></div>`);
+  s += w.length ? `<div style="margin-top:14px">${w.join('')}</div>` : '';
+  s += `<div class="chart" style="margin-top:16px"><h4>Odpovědi jednotlivých respondentů</h4>
+    <div class="legend"><span><i style="background:${C1};border-radius:50%"></i>ideální cena</span><span><i style="background:${C2};border-radius:50%"></i>maximální cena</span>${d.m.unitCost !== null ? `<span><i class="dash" style="border-color:${CDARK}"></i>celkové náklady na jednotku</span>` : ''}</div>
+    ${chartResp(P(), st, [{ name: 'náklady/j.', v: d.m.unitCost, col: CDARK, dash: true }, { name: 'naše cena', v: d.P, col: '#8A6A00' }])}</div>`;
+  s += `<div class="info yel" style="margin-top:14px"><b>Jde o malou orientační sondu.</b> Průměr maximálních cen není pevný cenový strop ani důkaz, že zákazníci za tuto cenu skutečně nakoupí.</div>`;
+  return s;
+}
+
+// ---------- Krok 4 ----------
+function step4() {
+  const p = P(), u = unitInfo(p.meta);
+  const cards = p.comps.map((c, i) => `
+    <div class="comp">
+      <div class="hd"><b>Konkurent ${i + 1}</b><button class="iconbtn" data-act="del" data-list="comps" data-id="${c.id}" title="Odstranit konkurenta" aria-label="Odstranit konkurenta">✕</button></div>
+      ${fld('Konkurent a konkurenční produkt', `comps:${c.id}:name`, { ph: 'Firma — produkt' })}
+      <div class="g2">
+        ${fld('Cena (Kč)', `comps:${c.id}:price`, { num: true, ph: 'např. 690' })}
+        ${fld(`Počet jednotek (${esc(u.short)}) v nabídce`, `comps:${c.id}:qty`, { num: true, ph: '1' })}
+      </div>
+      <div class="unitp" data-out="compunit" data-id="${c.id}"></div>
+      <div class="g2">
+        ${fld('Odkaz na zdroj', `comps:${c.id}:source`, { ph: 'https://…' })}
+        ${fld('Datum zjištění', `comps:${c.id}:date`, { type: 'date' })}
+      </div>
+      ${fld('Hlavní rozdíl oproti našemu produktu', `comps:${c.id}:diff`, { area: true, rows: 2, ph: 'V čem jsou jiní? Lepší, horší, jen jiní?' })}
+    </div>`).join('');
+  const pos = Object.entries(POSITIONS).map(([k, [t, s]]) => `<label class="choice ${p.position === k ? 'on' : ''}"><input type="radio" name="pos" value="${k}" data-bind="position" data-rerender="1" ${p.position === k ? 'checked' : ''}><b>${t}</b><span>${s}</span></label>`).join('');
+  return head(4, 'Kolik za podobnou věc zákazník zaplatí jinde? A kde se chcete cenově postavit?') + `
+  <div class="info"><b>Srovnávejte srovnatelné.</b> Cena jednoho kusu a cena rodinného balení spolu bez přepočtu moc nevyřeší. Proto ceny přepočítáme na vaši jednotku (${esc(u.label)}).</div>
+  <div class="card" style="margin-top:18px">
+    <label class="check"><input type="checkbox" data-bind="noComp" data-check="1" data-rerender="1" ${p.noComp ? 'checked' : ''}> Nenašli jsme přímé konkurenty</label>
+    ${p.noComp ? `<div style="margin-top:10px">${fld('Proč nemáte přímé konkurenty?', 'noCompReason', { area: true, rows: 2 })}${fld('Co zákazník používá dnes místo vašeho produktu? Kolik ho to stojí?', 'alternative', { area: true, rows: 2, hint: 'I „nic“ nebo „udělá si to sám“ je alternativa — a má svou cenu v penězích nebo čase.' })}</div>` :
+    `<div class="comps" style="margin-top:8px">${cards}</div><button class="btn soft sm" data-act="addrow" data-list="comps" style="margin-top:12px">+ Přidat konkurenta</button>`}
+  </div>
+  <div class="card" style="margin-top:18px">
+    <h3>Zamýšlená cenová pozice</h3>
+    <div class="choices">${pos}</div>
+    ${fld('Čím je naše cenová pozice obhajitelná?', 'positionWhy', { area: true, rows: 3 })}
+    <div data-out="compsum"></div>
+  </div>
+  ${navRow(4)}`;
+}
+function outCompUnit(d, id) {
+  const x = d.comps.find(z => z.c.id === id); if (!x) return '';
+  if (x.u.state === 'ok') return `Cena za ${esc(d.u.label)}: <b>${fmtKc(x.u.value)}</b>`;
+  if (x.u.state === 'badqty') return '<span class="errmsg">Počet jednotek musí být větší než nula.</span>';
+  if (x.u.state === 'invalid') return '<span class="errmsg">Zkontrolujte cenu.</span>';
+  return '<span class="hint">Po zadání ceny ji přepočítáme na jednotku.</span>';
+}
+function outCompSum(d) {
+  const ok = d.comps.filter(x => x.u.state === 'ok');
+  if (P().noComp || !ok.length) return '';
+  const vals = ok.map(x => x.u.value);
+  return `<p class="hint" style="margin-top:6px">Konkurenti přepočtení na jednotku: <b>${fmtKc(Math.min(...vals))}${vals.length > 1 ? ' – ' + fmtKc(Math.max(...vals)) : ''}</b>. Doporučenou cenu z nich schválně nepočítáme, pozici volíte vy.</p>`;
+}
+
+// ---------- Krok 5 ----------
+function step5() {
+  const p = P(), u = unitInfo(p.meta), pr = p.pricing;
+  const strat = Object.entries(STRATS).map(([k, [t, s]]) => `<label class="choice ${pr.strategy === k ? 'on' : ''}"><input type="radio" name="strat" value="${k}" data-bind="pricing.strategy" data-rerender="1" ${pr.strategy === k ? 'checked' : ''}><b>${t}</b><span>${s}</span></label>`).join('');
+  return head(5, 'Všechny tři pohledy pohromadě. Cenu ale volíte vy, aplikace ji za vás nezprůměruje.') + `
+  <div class="card"><h3 style="margin-bottom:6px">Tři pohledy na jedné ose</h3><div data-out="threeviews"></div></div>
+  <div class="card" style="margin-top:18px">
+    <h3>Cena podle nákladů</h3>
+    <p class="hint" style="margin-bottom:10px">Kolik byste museli chtít, kdybyste vycházeli jen z nákladů? Zadejte přirážku k celkovým nákladům na jednotku. <b>Přirážka není marže:</b> přirážka se počítá z nákladů, marže z ceny.</p>
+    <div class="withsuf" style="max-width:260px">${inp('pricing.markup', { num: true, ph: 'např. 25', aria: 'Přirážka v procentech' })}<span class="suf">% přirážka</span></div>
+    <div data-out="markup" style="margin-top:10px"></div>
+  </div>
+  <div class="card" style="margin-top:18px">
+    <h3>Naše prodejní cena</h3>
+    <div class="info" style="margin:8px 0 12px">Finální cena je <b>průnik všech tří pohledů</b>: nákladů, toho, kolik jsou zákazníci ochotni zaplatit, a cen konkurence. Zvažte i psychologické a další faktory, například cenu 199 Kč místo 200 Kč nebo to, jak cenu vnímá vaše cílová skupina. Cena podle nákladů je jen jeden z podkladů.</div>
+    <div class="bigprice"><input type="text" class="num ${numBad(pr.price) ? 'bad' : ''}" inputmode="decimal" data-bind="pricing.price" data-num="1" value="${esc(pr.price)}" placeholder="0" aria-label="Prodejní cena za jednotku"><span class="suf">Kč / ${esc(u.label)}</span></div>
+    <div class="errmsg" data-err="pricing.price"></div>
+    <div data-out="pricefb" style="margin-top:14px"></div>
+  </div>
+  <div class="card" style="margin-top:18px">
+    <h3>Cenová strategie</h3>
+    <div class="choices">${strat}</div>
+    ${pr.strategy ? `<details class="how" style="margin:0 0 14px"><summary>Co znamená ${STRATS[pr.strategy][0].toLowerCase()} strategie?</summary><div>${STRATS[pr.strategy][2]}</div></details>` : `<details class="how" style="margin:0 0 14px"><summary>Nápověda ke strategiím</summary><div>${Object.values(STRATS).map(([t, , l]) => `<p><b>${t}:</b> ${l}</p>`).join('')}</div></details>`}
+    <p class="hint" style="margin-bottom:12px">Výběr strategie nemění cenu ani prodej, ty upravujete vy.</p>
+    ${fld('Proč je tato strategie pro váš produkt vhodná?', 'pricing.strategyWhy', { area: true, rows: 3 })}
+    ${fld('Proč nesedí ostatní strategie?', 'pricing.strategyWhyNot', { area: true, rows: 3, optional: true })}
+    ${fld('Jaké cenové manipulace využijete?', 'pricing.manipulations', { area: true, rows: 2, optional: true, hint: 'Např. psychologická cena (199 Kč), podpora prodeje (2+1), cenové eventy, různé ceny pro různé zákazníky.' })}
+  </div>
+  <div class="card" style="margin-top:18px">
+    <h3>Obhajoba finální ceny</h3>
+    <p class="hint" style="margin-bottom:12px">Tři krátké odpovědi, které byste řekli při prezentaci.</p>
+    ${fld('…vůči nákladům', 'pricing.defCosts', { area: true, rows: 2 })}
+    ${fld('…vůči zákazníkům', 'pricing.defCustomers', { area: true, rows: 2 })}
+    ${fld('…vůči konkurenci', 'pricing.defCompetition', { area: true, rows: 2 })}
+  </div>
+  ${navRow(5)}`;
+}
+function outThreeViews(d) {
+  const st = d.stats, ok = d.comps.filter(x => x.u.state === 'ok');
+  const col = (t, body) => `<div class="tile"><div class="k" style="font-weight:700;color:#06403B">${t}</div><div style="font-size:.88rem;margin-top:6px">${body}</div></div>`;
+  return `<div class="tiles" style="margin-bottom:14px">
+    ${col('Náklady', d.m.unitCost !== null ? `Variabilní: <b>${fmtKc(d.v)}</b><br>Celkové na jednotku: <b>${fmtKc(d.m.unitCost)}</b><br><span class="hint">při ${fmtN(d.Q)} ${esc(d.u.short)} za rok</span>` : `<span class="hint">${d.Q === 0 ? 'Při nulovém prodeji nelze určit.' : d.miss('F', 'v', 'Q').join(' ')}</span>`)}
+    ${col('Zákazníci', st.n ? `Ideální: medián <b>${fmtKc(st.idealMedian)}</b>, průměr ${fmtKc(st.idealMean)}<br>Maximální: medián <b>${fmtKc(st.maxMedian)}</b>, průměr ${fmtKc(st.maxMean)}<br><span class="hint">${st.n} odpovědí</span>` : '<span class="hint">Zatím žádné úplné odpovědi (krok 3).</span>')}
+    ${col('Konkurence', P().noComp ? '<span class="hint">Přímé konkurenty jste nenašli, viz alternativa v kroku 4.</span>' : ok.length ? ok.map((x, i) => `${esc(x.c.name || 'Konkurent ' + (i + 1))}: <b>${fmtKc(x.u.value)}</b>`).join('<br>') : '<span class="hint">Zatím bez cen (krok 4).</span>')}
+  </div>
+  <div class="legend"><span><i style="background:${CDARK}"></i>náklady</span><span><i style="background:${C1};border-radius:50%"></i>ideální cena (medián)</span><span><i style="background:${C2};border-radius:50%"></i>maximální cena (medián)</span><span><i style="background:#46605C;transform:rotate(45deg) scale(.8)"></i>konkurence (K1, K2…)</span></div>
+  ${chartPriceMap(d)}`;
+}
+function outPriceFb(d) {
+  const { P: Pr, v } = d, uc = d.m.unitCost, st = d.stats;
+  if (Pr === null) return d.pErr ? '' : '<p class="hint">Zadejte cenu a hned uvidíte, jak si stojí vůči nákladům, zákazníkům a konkurenci.</p>';
+  const out = [];
+  if (v === null) out.push(['mid', 'ℹ︎', `Pro posouzení vůči nákladům: ${d.miss('v')[0]}`]);
+  else if (Pr < v - 1e-9) out.push(['neg', '▼', `<b>Cena je pod variabilními náklady (${fmtKc(v)}).</b> Každá prodaná jednotka vám přidává ztrátu ${fmtKc(v - Pr)}. Větší prodej tohle bohužel nezachrání.`]);
+  else if (Math.abs(Pr - v) <= 1e-9) out.push(['neg', '＝', `<b>Cena se rovná variabilním nákladům.</b> Každá jednotka se jen „zaplatí“, na fixní náklady nezbývá nic.`]);
+  else if (uc === null) out.push(['mid', 'ℹ︎', `Cena pokrývá variabilní náklady a z každé jednotky zbývá ${fmtKc(Pr - v)} na fixní náklady. Celkové náklady na jednotku zatím neznáme: ${d.Q === 0 ? 'při nulovém prodeji je nelze určit.' : d.miss('F', 'Q')[0]}`]);
+  else if (Pr < uc - 1e-9) out.push(['mid', '◐', `<b>Cena je nad variabilními, ale pod celkovými náklady na jednotku (${fmtKc(uc)}).</b> Z každé jednotky zbývá ${fmtKc(Pr - v)} na fixní náklady, při plánovaném prodeji to ale nestačí. U penetrační strategie to může být záměr, pak to obhajte.`]);
+  else out.push(['pos', '▲', `<b>Cena pokrývá celkové náklady při plánovaném prodeji (${fmtKc(uc)}).</b> Na každé jednotce zůstává ${fmtKc(Pr - uc)}.`]);
+  if (st.n) {
+    const accept = st.used.filter(u => u.max >= Pr).length;
+    if (Pr > st.maxMedian) out.push(['mid', '?', `<b>Cena je nad mediánem maximálních cen respondentů (${fmtKc(st.maxMedian)}).</b> Nejde o zákaz, ale o podnět k obhajobě a ověření. Tuto cenu by ještě akceptovalo ${accept} z ${st.n} respondentů.`]);
+    else out.push(['pos', '✓', `Tuto cenu by podle sondy ještě akceptovalo <b>${accept} z ${st.n}</b> respondentů. Medián ideální ceny je ${fmtKc(st.idealMedian)}.`]);
+  }
+  const ok = d.comps.filter(x => x.u.state === 'ok').map(x => x.u.value);
+  if (!P().noComp && ok.length) {
+    const mn = Math.min(...ok), mx = Math.max(...ok);
+    const where = Pr < mn ? 'pod všemi konkurenty' : Pr > mx ? 'nad všemi konkurenty' : 'v rozpětí konkurence';
+    const pos = P().position;
+    let clash = '';
+    if (pos === 'levnejsi' && Pr >= mn) clash = ' Zvolili jste ale pozici „levnější alternativa“. Sedí to?';
+    if (pos === 'drazsi' && Pr <= mx) clash = ' Zvolili jste ale pozici „dražší nabídka“. Sedí to?';
+    out.push([clash ? 'mid' : 'pos', '◆', `Vůči konkurenci (${fmtKc(mn)}${ok.length > 1 ? ' – ' + fmtKc(mx) : ''}) jste <b>${where}</b>.${clash}`]);
+  }
+  return out.map(([c, ic, t]) => `<div class="feedback ${c}" style="margin-top:8px"><span class="ic" aria-hidden="true">${ic}</span><div>${t}</div></div>`).join('');
+}
+function outMarkup(d) {
+  const mk = parseNum(P().pricing.markup);
+  if (d.m.unitCost === null) return `<p class="hint">Pro výpočet potřebujeme celkové náklady na jednotku. ${d.Q === 0 ? 'Při nulovém prodeji je nelze určit.' : d.miss('F', 'v', 'Q')[0]}</p>`;
+  if (mk.state !== 'ok') return '<p class="hint">Zadejte přirážku v procentech.</p>';
+  const prop = d.m.unitCost * (1 + mk.value / 100);
+  const margin = prop > 0 ? (prop - d.m.unitCost) / prop * 100 : null;
+  return `<div class="formula">${fmtN(d.m.unitCost)} Kč × (1 + ${fmtN(mk.value)} %) = <b>${fmtKc(prop)}</b></div>
+    <p class="hint">Přirážka ${fmtPct(mk.value)} z nákladů odpovídá marži ${margin !== null ? fmtPct(margin) : '—'} z ceny.</p>
+    <button class="btn yel sm" data-act="usemarkup" data-v="${prop}" style="margin-top:6px">Použít tuto cenu (${fmtKc(Math.round(prop * 100) / 100)})</button>`;
+}
+
+// ---------- Krok 6 — Co když…? (závěrečná pracovní obrazovka) ----------
+const cloneItems = (list, withPeriod) => (list || []).map(r => withPeriod ? { id: uid(), name: r.name || '', amount: r.amount || '', period: r.period === 'y' ? 'y' : 'm' } : { id: uid(), name: r.name || '', amount: r.amount || '' });
+function planSnapshot(p, d) {
+  return { P: d.P, Q: d.Q, F: d.F, v: d.v, fixed: cloneItems(p.fixed.filter(r => filled(r.name) || filled(r.amount)), true), variable: cloneItems(p.variable.filter(r => filled(r.name) || filled(r.amount)), false), savedAt: new Date().toISOString() };
+}
+function expFromPlan(p) {
+  const pl = p.plan;
+  return { mode: 'manual', P: toInput(pl.P), markup: p.pricing.markup || '', Q: toInput(pl.Q), fixed: cloneItems(pl.fixed, true), variable: cloneItems(pl.variable, false) };
+}
+function ensureExp(p) {
+  if (p.plan && (!p.exp || !Array.isArray(p.exp.fixed) || !Array.isArray(p.exp.variable))) p.exp = expFromPlan(p);
+}
+const round2 = n => Math.round(n * 100) / 100;
+function expModel(p, prec) {
+  ensureExp(p);
+  const e = p.exp, errs = [], u = unitInfo(p.meta);
+  const fx = sumFixed(e.fixed), vx = sumVariable(e.variable);
+  let F = fx.invalid ? null : (fx.value === null ? (e.fixed.some(r => filled(r.name)) ? null : 0) : fx.value);
+  let v = vx.invalid ? null : (vx.value === null ? (e.variable.some(r => filled(r.name)) ? null : 0) : vx.value);
+  if (F === null) errs.push(fx.invalid ? 'neplatná částka u fixních nákladů' : 'doplňte částky fixních nákladů');
+  if (v === null) errs.push(vx.invalid ? 'neplatná částka u variabilních nákladů' : 'doplňte částky variabilních nákladů');
+  const q = parseNum(e.Q); let Q = null;
+  if (q.state !== 'ok' || q.value < 0) errs.push('prodej');
+  else if (u.integer && Math.abs(q.value - Math.round(q.value)) > 1e-9) errs.push('prodej musí být celé číslo');
+  else Q = q.value;
+  let Pr = null, mk = null, unitCost = null;
+  if (F !== null && v !== null && Q) unitCost = F / Q + v;
+  if (e.mode === 'markup') {
+    const m = parseNum(e.markup);
+    if (m.state !== 'ok' || m.value < -100) errs.push('přirážka');
+    else { mk = m.value; if (Q === 0) errs.push('cenu podle nákladů nelze spočítat při nulovém prodeji'); else if (unitCost !== null) Pr = round2(unitCost * (1 + mk / 100)); }
+  } else {
+    const pp = parseNum(e.P);
+    if (pp.state !== 'ok' || pp.value < 0) errs.push('cena'); else Pr = pp.value;
+  }
+  return { errs, P: Pr, Q, F, v, mode: e.mode, markup: mk, m: model(F, v, Q, Pr, prec) };
+}
+function expDiffers(p, x) {
+  const pl = p.plan;
+  return !x.errs.length && (Math.abs(x.P - pl.P) > 1e-9 || Math.abs(x.Q - pl.Q) > 1e-9 || Math.abs(x.F - pl.F) > 1e-9 || Math.abs(x.v - pl.v) > 1e-9);
+}
+
+function step6() {
+  const p = P(), d = derive(p), u = d.u;
+  if (!p.plan) {
+    const miss = d.miss('P', 'Q', 'F', 'v');
+    return head(6, 'Vydělá vaše firma při zvolené ceně? Tady to ověříte a můžete ještě cokoli upravit.') + `
+    <div class="card">
+      <h3>Nejdřív uložte náš plán</h3>
+      <p>Uložený plán je pevný bod pro porovnání. Pak tady vytvoříte novou variantu: měníte cenu, prodej i jednotlivé náklady a hned vidíte, co to udělá s výsledkem. Do kroků 1–5 se změny propíšou, až když variantu přijmete jako náš plán.</p>
+      ${miss.length ? `<div class="info warn" style="margin:12px 0">Pro uložení plánu chybí: ${miss.join(' ')}</div>` : `<div class="tiles" style="margin:14px 0">
+        <div class="tile"><div class="k">Cena</div><div class="v">${fmtKc(d.P)}</div></div>
+        <div class="tile"><div class="k">Prodej za rok</div><div class="v">${fmtN(d.Q)} <small>${esc(u.short)}</small></div></div>
+        <div class="tile"><div class="k">Fixní náklady za rok</div><div class="v">${fmtKc(d.F)}</div></div>
+        <div class="tile"><div class="k">Variabilní náklady / ${esc(u.short)}</div><div class="v">${fmtKc(d.v)}</div></div></div>`}
+      <button class="btn" data-act="saveplan" ${miss.length ? 'disabled' : ''}>Uložit náš plán a začít</button>
+    </div>${navRow(6)}`;
+  }
+  ensureExp(p);
+  const pl = p.plan, e = p.exp;
+  const stale = d.P !== pl.P || d.Q !== pl.Q || d.F !== pl.F || d.v !== pl.v;
+  const slider = (key, min, max, step, cur) => `<input type="range" min="${min}" max="${max}" step="${step}" value="${cur}" data-slider="${key}" aria-label="posuvník">`;
+  const numIn = (key, aria) => `<input type="text" class="num ${numBad(e[key], { neg: key === 'markup' }) ? 'bad' : ''}" inputmode="decimal" data-bind="exp.${key}" data-num="1" ${key === 'markup' ? 'data-neg="1"' : ''} value="${esc(e[key])}" aria-label="${aria}">`;
+  const val = (k, dflt) => { const r = parseNum(e[k]); return r.state === 'ok' ? r.value : dflt; };
+  const pmax = Math.ceil(Math.max(pl.P * 2, 10)), qmax = Math.ceil(Math.max(pl.Q * 3, 10 * u.prec, 10));
+  const fixedRows = e.fixed.map(r => `<div class="xrow">
+      ${inp(`xfixed:${r.id}:name`, { ph: 'Název položky', aria: 'Název fixní položky' })}
+      <div class="withsuf">${inp(`xfixed:${r.id}:amount`, { num: true, ph: 'Kč', aria: 'Částka v Kč' })}</div>
+      ${sel(`xfixed:${r.id}:period`, [['m', 'Kč měsíčně'], ['y', 'Kč ročně']], { aria: 'Období' })}
+      <button class="iconbtn" data-act="del" data-list="xfixed" data-id="${r.id}" title="Odstranit" aria-label="Odstranit položku">✕</button></div>`).join('');
+  const varRows = e.variable.map(r => `<div class="xrow v">
+      ${inp(`xvariable:${r.id}:name`, { ph: 'Název položky', aria: 'Název variabilní položky' })}
+      <div class="withsuf">${inp(`xvariable:${r.id}:amount`, { num: true, ph: 'Kč', aria: 'Kč na jednotku' })}<span class="suf">Kč/${esc(u.short)}</span></div>
+      <button class="iconbtn" data-act="del" data-list="xvariable" data-id="${r.id}" title="Odstranit" aria-label="Odstranit položku">✕</button></div>`).join('');
+  return head(6, 'Vydělá vaše firma při zvolené ceně? Zkoušejte „co když…?“: měňte cenu, prodej i jednotlivé náklady, dokud nedojdete k výsledku, který obhájíte. Uložený plán zůstává beze změny, dokud ho sami nepřepíšete.') + `
+  ${stale ? `<div class="info warn" style="margin-bottom:16px"><b>Vstupy v krocích 1–5 se od uložení plánu změnily.</b> Porovnáváte se starší verzí plánu. <button class="btn sm ghost" data-act="saveplan" style="margin-left:8px">Uložit plán znovu z kroků 1–5</button></div>` : ''}
+  <div class="xbar" data-out="xbar"></div>
+  <div class="lab6">
+    <div class="lab6-in">
+      <div class="card">
+        <h3>Cena</h3>
+        <div class="seg" role="radiogroup" aria-label="Jak stanovit cenu">
+          <label class="${e.mode !== 'markup' ? 'on' : ''}"><input type="radio" name="xmode" value="manual" data-bind="exp.mode" data-rerender="1" ${e.mode !== 'markup' ? 'checked' : ''}>Zadám cenu sám/sama</label>
+          <label class="${e.mode === 'markup' ? 'on' : ''}"><input type="radio" name="xmode" value="markup" data-bind="exp.mode" data-rerender="1" ${e.mode === 'markup' ? 'checked' : ''}>Cena = náklady + přirážka</label>
+        </div>
+        ${e.mode === 'markup' ? `<div class="ctrl"><div class="top2"><label>Přirážka k celkovým nákladům na jednotku</label></div>
+          <div class="row2">${slider('markup', 0, 200, 1, Math.min(200, Math.max(0, val('markup', 0))))}${numIn('markup', 'Přirážka v procentech')}<span class="suf">%</span></div></div>
+          <p class="hint">Cena se teď sama mění, když změníte náklady nebo prodej, protože se mění náklady na jednotku.</p>`
+        : `<div class="ctrl"><div class="top2"><label>Prodejní cena</label><span class="plan">plán: ${fmtKc(pl.P)}</span></div>
+          <div class="row2">${slider('P', 0, pmax, pl.P >= 100 ? 1 : 0.1, Math.min(pmax, val('P', pl.P)))}${numIn('P', 'Prodejní cena')}<span class="suf">Kč/${esc(u.short)}</span></div></div>`}
+        <div data-out="xprice"></div>
+      </div>
+      <div class="card">
+        <h3>Prodej</h3>
+        <div class="ctrl"><div class="top2"><label>Roční počet prodaných jednotek</label><span class="plan">plán: ${fmtN(pl.Q)} ${esc(u.short)}</span></div>
+          <div class="row2">${slider('Q', 0, qmax, u.prec, Math.min(qmax, val('Q', pl.Q)))}${numIn('Q', 'Roční prodej')}<span class="suf">${esc(u.short)}</span></div></div>
+        <div data-out="expmsg"></div>
+      </div>
+      <div class="card">
+        <h3>Fixní náklady</h3>
+        <div class="xrows">${fixedRows || '<p class="hint">Žádné položky.</p>'}</div>
+        <button class="btn soft sm" data-act="addrow" data-list="xfixed" style="margin-top:8px">+ Přidat fixní náklad</button>
+        <h3 style="margin-top:18px">Variabilní náklady</h3>
+        <div class="xrows">${varRows || '<p class="hint">Žádné položky.</p>'}</div>
+        <button class="btn soft sm" data-act="addrow" data-list="xvariable" style="margin-top:8px">+ Přidat variabilní náklad</button>
+        <div data-out="xcosts" style="margin-top:14px"></div>
+      </div>
+      <div class="card">
+        <div class="quick"><span class="lbl">Rychlé varianty (vždy z uloženého plánu):</span>
+          <button class="btn ghost sm" data-act="quick" data-k="P-10">Cena −10 %</button>
+          <button class="btn ghost sm" data-act="quick" data-k="P+10">Cena +10 %</button>
+          <button class="btn ghost sm" data-act="quick" data-k="Q-20">Prodej −20 %</button>
+          <button class="btn ghost sm" data-act="quick" data-k="v+15">Variabilní náklady +15 %</button>
+        </div>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:16px">
+          <button class="btn ghost" data-act="expreset">↺ Vrátit variantu na plán</button>
+          <button class="btn yel" data-act="expadopt">Přijmout variantu jako náš plán</button>
+        </div>
+        <p class="hint" style="margin-top:8px">Přijetím se změny propíšou do kroků 1–5 a varianta se stane vaším novým plánem.</p>
+      </div>
+    </div>
+    <div class="lab6-out"><div class="card"><div data-out="exptable"></div><div data-out="expfb"></div></div></div>
+  </div>
+  <div class="card" style="margin-top:18px"><div data-out="expcharts"></div></div>
+  ${navRow(6)}`;
+}
+function quip(m) {
+  if (m.profit === null) return '';
+  if (m.P !== null && m.v !== null && m.P < m.v) return 'Každý další kus vám teď přidává ztrátu. Větší prodej tohle bohužel nezachrání.';
+  if (m.P !== null && m.P === m.v && m.F > 0) return 'Cena jen pokrývá variabilní náklady. Fixní náklady tak nepokryjete při žádném objemu.';
+  if (m.profit > 0) return 'Při těchto předpokladech jste v plusu. Teď ještě ověřit, jestli jim věří i zákazníci.';
+  if (m.revenue > 0) return 'Tržby vypadají hezky. Teď ještě co z nich zůstane.';
+  return '';
+}
+function profitHTML(n) {
+  if (n === null) return '—';
+  if (Math.abs(n) < 1e-9) return '<span>0 Kč <span class="pill">± nula</span></span>';
+  return n > 0 ? `<span class="pos">▲ ${fmtSigned(n)} <span class="pill pos">zisk</span></span>` : `<span class="neg">▼ ${fmtN(n)} Kč <span class="pill neg">ztráta</span></span>`;
+}
+function beHTML(m, u, short) {
+  switch (m.beState) {
+    case 'ok': return `${fmtN(m.be)} ${esc(u)}`;
+    case 'zero': return `0 ${esc(u)}${short ? '' : ' <span class="hint">(bez fixních nákladů)</span>'}`;
+    case 'eq_fixed': return short ? 'nedosažitelný' : 'nedosažitelný <span class="hint">(cena = variabilní náklady)</span>';
+    case 'eq_zero': return short ? '—' : '— <span class="hint">(výsledek je vždy nulový)</span>';
+    case 'below': return short ? 'nedosažitelný' : 'nedosažitelný <span class="hint">(cena pod variabilními náklady)</span>';
+    default: return '—';
+  }
+}
+function expCtx(d) {
+  const p = P(); if (!p.plan) return null;
+  const pl = p.plan, a = model(pl.F, pl.v, pl.Q, pl.P, d.u.prec), x = expModel(p, d.u.prec);
+  return { p, pl, a, x };
+}
+function outExpMsg(d) {
+  const c = expCtx(d); if (!c) return '';
+  const { x, pl } = c; if (x.errs.length || x.P === null) return '';
+  if (Math.abs(x.P - pl.P) > 1e-9 && Math.abs(x.Q - pl.Q) < 1e-9) return `<div class="pricechange" style="margin-top:10px">Změnili jste cenu. Počet prodaných jednotek zatím zůstává stejný. Jak by podle vás reagovali zákazníci?</div>`;
+  return '';
+}
+function outXPrice(d) {
+  const c = expCtx(d); if (!c) return '';
+  const { x } = c;
+  if (x.mode !== 'markup') {
+    if (x.P === null || x.m.unitCost === null) return '';
+    const mk = x.m.unitCost > 0 ? (x.P / x.m.unitCost - 1) * 100 : null;
+    return `<p class="hint" style="margin-top:8px">Vůči celkovým nákladům na jednotku (${fmtKc(x.m.unitCost)}) to odpovídá přirážce ${mk === null ? '—' : fmtPct(mk)}.</p>`;
+  }
+  if (x.P === null) return `<div class="info warn" style="margin-top:10px">${x.errs.join(', ') || 'Cenu zatím nelze spočítat.'}</div>`;
+  const margin = x.P > 0 ? (x.P - x.m.unitCost) / x.P * 100 : null;
+  return `<div class="formula" style="margin-top:10px">${fmtN(x.m.unitCost)} Kč × (1 + ${fmtN(x.markup)} %) = <b>${fmtKc(x.P)}</b></div>
+    <p class="hint">Přirážka ${fmtPct(x.markup)} z nákladů = marže ${margin === null ? '—' : fmtPct(margin)} z ceny. Přirážka není marže.</p>`;
+}
+function outXCosts(d) {
+  const c = expCtx(d); if (!c) return '';
+  const { x, pl } = c, sh = esc(d.u.short);
+  const ch = (a, b, suf) => a === null || b === null || Math.abs(a - b) < 1e-9 ? '' : ` <span class="hint">(plán ${fmtN(b)}${suf})</span>`;
+  return `<div class="tiles">
+    <div class="tile"><div class="k">Fixní náklady za rok</div><div class="v">${fmtKc(x.F)}</div>${ch(x.F, pl.F, ' Kč')}</div>
+    <div class="tile"><div class="k">Variabilní na ${sh}</div><div class="v">${fmtKc(x.v)}</div>${ch(x.v, pl.v, ' Kč')}</div>
+    <div class="tile hl"><div class="k">Celkové náklady na ${sh}</div><div class="v">${x.m.unitCost !== null ? fmtKc(x.m.unitCost) : '—'}</div>${x.Q === 0 ? '<div class="miss">Při nulovém prodeji nelze určit.</div>' : ''}</div>
+  </div>`;
+}
+function outExpTable(d) {
+  const c = expCtx(d); if (!c) return '';
+  const { a, x } = c;
+  if (x.errs.length) return `<h3 style="margin-bottom:8px">Výsledek</h3><div class="info bad">Zkontrolujte: ${x.errs.join(', ')}.</div>`;
+  const b = x.m, sh = d.u.short;
+  const dk = (va, vb, suf = ' Kč') => va === null || vb === null ? '—' : (Math.abs(vb - va) < 1e-9 ? '0' : fmtSigned(vb - va, suf));
+  const r = (name, va, vb, fmt, suf, cls = '') => `<tr class="${cls}"><td>${name}</td><td>${fmt(va)}</td><td>${fmt(vb)}</td><td>${dk(va, vb, suf)}</td></tr>`;
+  const beDiff = a.beState === 'ok' && b.beState === 'ok' ? dk(a.be, b.be, ' ' + sh) : '—';
+  const q = quip(b);
+  return `<h3 style="margin-bottom:8px">Náš plán vs. nová varianta</h3><div class="tablewrap"><table class="cmp">
+    <thead><tr><th></th><th><span class="sw" style="background:${C1}"></span>Plán</th><th><span class="sw" style="background:${C2}"></span>Nová varianta</th><th>Rozdíl</th></tr></thead>
+    <tbody>
+      ${r('Cena', a.P, b.P, fmtKc)}
+      ${r('Prodej', a.Q, b.Q, v => fmtN(v) + ' ' + esc(sh), ' ' + sh)}
+      ${r('Celkové náklady na ' + esc(sh), a.unitCost, b.unitCost, fmtKc, undefined, 'sep')}
+      ${r('Tržby', a.revenue, b.revenue, fmtKc, undefined, 'sep')}
+      ${r('Celkové náklady', a.costTotal, b.costTotal, fmtKc)}
+      <tr class="big"><td>Zisk / ztráta</td><td>${profitHTML(a.profit)}</td><td>${profitHTML(b.profit)}</td><td>${dk(a.profit, b.profit)}</td></tr>
+      <tr><td>Bod zvratu</td><td>${beHTML(a, sh, true)}</td><td>${beHTML(b, sh, true)}</td><td>${beDiff}</td></tr>
+    </tbody></table></div>
+    ${q ? `<div class="feedback ${b.profit > 0 ? 'pos' : 'neg'}" style="margin-top:12px"><span class="ic" aria-hidden="true">${b.profit > 0 ? '▲' : '▼'}</span><div>${q}</div></div>` : ''}`;
+}
+function outExpFb(d) {
+  const c = expCtx(d); if (!c || c.x.errs.length || c.x.P === null) return '';
+  const x = c.x;
+  const pseudo = { P: x.P, v: x.v, m: x.m, Q: x.Q, stats: d.stats, comps: d.comps, pErr: '', u: d.u, miss: () => [''] };
+  return `<h4 style="margin:16px 0 0;font-family:var(--fh);color:var(--dark)">Jak obstojí cena nové varianty</h4>${outPriceFb(pseudo)}`;
+}
+function outXBar(d) {
+  const c = expCtx(d); if (!c || c.x.errs.length) return '';
+  const b = c.x.m;
+  return `<span>Nová varianta: cena <b>${fmtKc(b.P)}</b></span><span>výsledek <b>${b.profit === null ? '—' : (b.profit >= 0 ? '▲ ' : '▼ ') + fmtN(b.profit) + ' Kč'}</b></span><span>BZ <b>${beHTML(b, d.u.short, true)}</b></span>`;
+}
+function outExpCharts(d) {
+  const c = expCtx(d); if (!c || c.x.errs.length) return '';
+  const { a, x, pl } = c;
+  return `<div class="charts">
+    <div class="chart"><h4>Tržby, náklady a výsledek</h4><div class="cap">Kč za rok; záporný zisk = ztráta pod nulovou osou.</div>
+      <div class="legend"><span><i style="background:${C1}"></i>Náš plán</span><span><i style="background:${C2}"></i>Nová varianta</span></div>${chartBars(a, x.m)}</div>
+    <div class="chart"><h4>Kdy se to začne vyplácet</h4><div class="cap">Nová varianta: tržby a náklady podle prodaného množství. Najetím myší zobrazíte hodnoty.</div>
+      <div class="legend"><span><i class="ln" style="background:${C1}"></i>Tržby</span><span><i class="dash" style="border-color:${C2}"></i>Celkové náklady (fixní + variabilní)</span><span><i class="dash" style="border-color:#46605C;border-top-style:dotted"></i>Fixní náklady</span><span><i style="background:${LOSSF}"></i>ztráta</span><span><i style="background:${GAINF}"></i>zisk</span></div>
+      ${chartCVP(x.m, d.u.prec, d.u.short, { planQ: pl.Q, qLabel: 'Varianta' })}</div>
+  </div>`;
+}
+
+// ---------- Krok 7 — Shrnutí a PDF ----------
+function step7() {
+  const p = P(), d = derive(p);
+  const sts = [1, 2, 3, 4, 5].map(i => [i, stepStatus(p, d, i)]);
+  const notDone = sts.filter(([, s]) => s !== 'done');
+  let pending = false;
+  if (p.plan) { const x = expModel(p, d.u.prec); pending = expDiffers(p, x) || x.errs.length > 0 && p.expTried; }
+  const complete = [d.P, d.Q, d.F, d.v].every(v => v !== null);
+  return head(7, 'Výsledek vaší práce na jedné stránce: finální cena, z čeho vychází a co znamená pro firmu. Tohle si stáhnete jako PDF.') + `
+  ${pending ? `<div class="info warn" style="margin-bottom:14px"><b>V kroku Ekonomické výsledky máte rozpracovanou novou variantu, kterou jste zatím nepřijali.</b> Shrnutí ukazuje náš plán. Chcete do něj variantu nejdřív přijmout?
+    <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:10px"><button class="btn sm yel" data-act="expadopt">Přijmout variantu jako náš plán</button><button class="btn sm ghost" data-act="expreset">Zahodit variantu</button><button class="btn sm ghost" data-act="go" data-step="6">Podívat se na ni</button></div></div>` : ''}
+  ${notDone.length ? `<div class="info pur" style="margin-bottom:14px"><b>Ještě není všechno hotové:</b> ${notDone.map(([i, s]) => `<a href="#krok-${i}" data-act="go" data-step="${i}">${i}. ${STEPS[i - 1]}</a> (${STATUS_TXT[s].toLowerCase()})`).join(', ')}. PDF můžete stáhnout i tak, chybějící údaje v něm budou označené pomlčkou.</div>` : ''}
+  <div class="card">
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+      <h3>Náhled shrnutí</h3>
+      <div style="display:flex;gap:8px;flex-wrap:wrap">
+        <button class="btn" data-act="pdf" ${complete ? '' : 'disabled title="Nejdřív doplňte cenu, prodej a náklady."'}>⬇ Stáhnout PDF</button>
+        <button class="btn ghost sm" data-act="printhtml">Stáhnout verzi pro tisk (HTML)</button>
+      </div>
+    </div>
+    <p class="hint" style="margin-top:4px">PDF obsahuje jen náš plán, tedy finální variantu. Rozpracované varianty z kroku 6 v něm nejsou.</p>
+    <div class="sheetwrap"><div class="rep pdfsheet" id="pdfsheet" data-out="final"></div></div>
+  </div>
+  ${navRow(7)}`;
+}
+function finalBodyHTML() {
+  const html = reportHTML();
+  return html.split('<body>')[1].split('</body>')[0].replace(/<div class="printbar">[\s\S]*?<\/div>/, '');
+}
+let pdfBusy = false;
+// SVG → obrázek (html2canvas s inline SVG nepracuje spolehlivě)
+async function svgToImg(svg) {
+  const r = svg.getBoundingClientRect(); if (!r.width) return null;
+  const c = svg.cloneNode(true);
+  c.setAttribute('xmlns', 'http://www.w3.org/2000/svg'); c.setAttribute('width', r.width); c.setAttribute('height', r.height);
+  c.querySelectorAll('.hit,.xh').forEach(n => n.remove());
+  const ot = svg.querySelectorAll('text'), ct = c.querySelectorAll('text');
+  ot.forEach((t, i) => { const cs = getComputedStyle(t); const n = ct[i]; if (!n) return; n.setAttribute('font-family', 'Plus Jakarta Sans, Arial, sans-serif'); n.setAttribute('font-size', cs.fontSize); n.setAttribute('font-weight', cs.fontWeight); n.setAttribute('fill', cs.fill); n.removeAttribute('class'); n.removeAttribute('style'); });
+  const url = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(new XMLSerializer().serializeToString(c));
+  const img = await new Promise((res, rej) => { const im = new Image(); im.onload = () => res(im); im.onerror = rej; im.src = url; });
+  const cv = document.createElement('canvas'); cv.width = r.width * 2; cv.height = r.height * 2;
+  const g = cv.getContext('2d'); g.fillStyle = '#fff'; g.fillRect(0, 0, cv.width, cv.height); g.drawImage(img, 0, 0, cv.width, cv.height);
+  const out = document.createElement('img'); out.src = cv.toDataURL('image/png'); out.style.width = r.width + 'px'; out.style.height = r.height + 'px'; out.style.display = 'block';
+  return out;
+}
+async function makePDF() {
+  if (pdfBusy) return; pdfBusy = true;
+  const p = P();
+  const btn = document.querySelector('[data-act="pdf"]'); if (btn) { btn.disabled = true; btn.textContent = 'Připravuji PDF…'; }
+  const filename = `za-kolik-${slug(p.meta.product)}.pdf`;
+  const holder = document.createElement('div');
+  holder.style.cssText = 'position:fixed;left:0;top:0;width:718px;z-index:-1;pointer-events:none;background:#fff';
+  holder.innerHTML = `<div class="rep pdfsheet printing" style="max-width:none;width:718px;margin:0;padding:0;box-shadow:none">${finalBodyHTML()}</div>`;
+  document.body.appendChild(holder);
+  const sheet = holder.firstElementChild;
+  try {
+    if (typeof html2pdf !== 'function') throw new Error('nolib');
+    for (const svg of [...sheet.querySelectorAll('svg')]) { try { const im = await svgToImg(svg); if (im) svg.replaceWith(im); } catch (e) { } }
+    const y = window.scrollY; window.scrollTo(0, 0);
+    const blob = await html2pdf().set({
+      margin: [10, 10, 12, 10], filename,
+      image: { type: 'jpeg', quality: 0.95 },
+      html2canvas: { scale: 2, backgroundColor: '#ffffff', scrollX: 0, scrollY: 0 },
+      jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
+      pagebreak: { mode: ['css'], avoid: ['tr', '.kpi', 'img', '.box', 'h2', '.keep', 'p'] },
+    }).from(sheet).outputPdf('blob');
+    window.scrollTo(0, y);
+    if (DL) {
+      try { await DL.save({ filename, data: blob }); toast('PDF je připravené ke stažení.'); }
+      catch (e) { if (!e || e.code !== 'declined') toast('PDF se nepodařilo stáhnout. Zkuste verzi pro tisk.'); }
+    } else {
+      try { const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = filename; document.body.appendChild(a); a.click(); a.remove(); }
+      catch (e) { toast('Stažení tady není k dispozici. Použijte verzi pro tisk.'); }
+    }
+  } catch (e) {
+    toast('PDF se nepodařilo vytvořit. Stáhněte verzi pro tisk a uložte ji jako PDF.');
+  }
+  holder.remove();
+  pdfBusy = false; if (btn) { btn.disabled = false; btn.textContent = '⬇ Stáhnout PDF'; }
+}
+
+// ===== Shell, přehled, události =====
+const $ = s => document.querySelector(s);
+let DL = null;
+try { if (window.claude && typeof window.claude.use === 'function') window.claude.use('downloads').then(x => { DL = x; }).catch(() => { }); } catch (e) { }
+
+function renderAll() {
+  const app = $('#app');
+  if (S.view === 'intro') { app.innerHTML = introHTML(); window.scrollTo(0, 0); return; }
+  const p = P(), isDemo = S.store.active === 'demo';
+  app.innerHTML = `
+  <header class="top">
+    <a class="brand" href="#uvod" data-act="intro"><span class="tag">Kč</span>Za kolik?</a>
+    <div class="proj" data-out="projname"></div>
+    <span class="savestate" id="savestate"></span>
+    <details class="menu"><summary>Projekt ▾</summary><div class="pop">
+      <button data-act="go" data-step="7">📄 Shrnutí a PDF</button>
+      <button data-act="export">⬇ Exportovat projekt (JSON)</button>
+      <button data-act="import">⬆ Importovat projekt</button>
+      <button data-act="intro">← Úvodní obrazovka</button>
+      ${isDemo ? '<button data-act="demoreset">↺ Obnovit ukázkový projekt</button><button data-act="toown">→ Přejít na náš projekt</button>' : '<button class="danger" data-act="wipe">Smazat náš projekt a začít znovu</button>'}
+      <div class="note">Ukládání v prohlížeči platí jen pro toto zařízení a tento prohlížeč. Export projektu slouží jako přenosná záloha a pro předání v týmu.</div>
+    </div></details>
+  </header>
+  ${isDemo ? `<div class="demo-banner"><span>🧪 <b>Ukázkový projekt.</b> Klidně v něm zkoušejte. Váš vlastní projekt je uložený zvlášť a nic se mu nestane.</span><span class="sp"></span><button class="btn sm ghost" data-act="demoreset">Obnovit ukázku</button><button class="btn sm" data-act="toown">Přejít na náš projekt →</button></div>` : ''}
+  <nav class="stepper" aria-label="Kroky">${STEPS.map((t, i) => `<button class="st" data-act="go" data-step="${i + 1}" data-st="${i + 1}"><span class="n">${i + 1}</span><span class="t"><b>${t}</b><small></small></span></button>`).join('')}</nav>
+  <div class="layout"><main id="main"></main><aside id="aside"></aside></div>
+  <div class="footer">Za kolik? · výuková pomůcka předmětu Marketing, Škoda Auto Vysoká škola · výpočty probíhají jen ve vašem prohlížeči</div>`;
+  renderStep();
+}
+function renderStep() {
+  const main = $('#main'); if (!main) return;
+  const fns = [step1, step2, step3, step4, step5, step6, step7];
+  const lay = document.querySelector('.layout'); if (lay) lay.classList.toggle('wide', S.step === 6);
+  main.innerHTML = `<details class="msum ${S.step === 6 ? 'hidden' : ''}" id="msum"><summary data-out="msumline"></summary><div data-out="summary" data-mobile="1"></div></details>` + fns[S.step - 1]();
+  refresh();
+}
+function setStep(i, scroll = true) {
+  S.step = Math.min(7, Math.max(1, i)); S.view = 'step';
+  if (location.hash !== '#krok-' + S.step) history.replaceState(null, '', '#krok-' + S.step);
+  if (!$('#main')) renderAll(); else renderStep();
+  if (scroll) window.scrollTo({ top: 0, behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
+}
+
+function summaryHTML(d, mobile) {
+  const u = d.u, m = d.m;
+  const it = (k, v, sub) => `<div class="it"><div class="k">${k}</div><div class="v">${v}</div>${sub ? `<div class="m">${sub}</div>` : ''}</div>`;
+  const price = d.P !== null ? `${fmtKc(d.P)} <small>/ ${esc(u.short)}</small>` : '—';
+  const uc = m.unitCost !== null ? `${fmtKc(m.unitCost)} <small>/ ${esc(u.short)}</small>` : '—';
+  const ucSub = m.unitCost !== null ? `při ${fmtN(d.Q)} ${esc(u.short)} za rok` : (d.Q === 0 ? 'Při nulovém prodeji nelze určit.' : d.miss('F', 'v', 'Q').join(' '));
+  let pr = '—', prSub = d.miss('P', 'Q', 'F', 'v').join(' ');
+  if (m.profit !== null) { pr = Math.abs(m.profit) < 1e-9 ? '0 Kč' : `<span class="${m.profit > 0 ? 'pos' : 'neg'}">${m.profit > 0 ? '▲ ' + fmtSigned(m.profit) : '▼ ' + fmtN(m.profit) + ' Kč'}</span>`; prSub = Math.abs(m.profit) < 1e-9 ? 'nulový výsledek' : (m.profit > 0 ? 'zisk' : 'ztráta') + ' před zdaněním'; }
+  let be = '—', beSub = '';
+  switch (m.beState) {
+    case 'ok': be = `${fmtN(m.be)} <small>${esc(u.short)}</small>`; beSub = d.Q !== null ? (d.Q >= m.be ? `plán je ${fmtN(d.Q - m.be)} ${esc(u.short)} nad ním` : `do něj chybí ${fmtN(m.be - d.Q)} ${esc(u.short)}`) : ''; break;
+    case 'zero': be = `0 <small>${esc(u.short)}</small>`; beSub = 'Bez fixních nákladů je každá jednotka v plusu.'; break;
+    case 'eq_fixed': be = 'nedosažitelný'; beSub = 'Cena = variabilní náklady, fixní náklady nelze pokrýt.'; break;
+    case 'eq_zero': be = '—'; beSub = 'Výsledek je při každém objemu nulový.'; break;
+    case 'below': be = 'nedosažitelný'; beSub = 'Cena je pod variabilními náklady, další prodej ztrátu prohlubuje.'; break;
+    default: beSub = d.miss('P', 'F', 'v').join(' ');
+  }
+  const q = quip(m);
+  return `<div class="sum">${mobile ? '' : `<h3>Přehled výsledků <small>${S.store.active === 'demo' ? 'ukázka' : 'náš plán'}</small></h3>`}
+    ${it('Zvolená cena za jednotku', price, d.P === null ? d.miss('P')[0] : '')}
+    ${it('Celkové náklady na jednotku', uc, ucSub)}
+    ${it('Roční zisk / ztráta', pr, prSub)}
+    ${it('Bod zvratu', be, beSub)}
+    ${q ? `<div class="quip">${q}</div>` : ''}
+    <div class="storage">${S.saveOk ? 'Ukládá se automaticky v tomto prohlížeči.' : '⚠ Prohlížeč neumožňuje ukládání. Projekt si průběžně exportujte.'}</div></div>`;
+}
+function msumLine(d) {
+  const m = d.m;
+  const pr = m.profit === null ? '—' : (m.profit >= 0 ? '▲ ' : '▼ ') + fmtN(m.profit) + ' Kč';
+  return `<span>Cena <b>${d.P !== null ? fmtKc(d.P) : '—'}</b></span><span>Výsledek <b class="${m.profit > 0 ? 'pos' : m.profit < 0 ? 'neg' : ''}" style="color:${m.profit > 0 ? 'var(--emL)' : m.profit < 0 ? 'var(--pur)' : '#fff'}">${pr}</b></span><span class="x">přehled ▾</span>`;
+}
+
+function refresh() {
+  const p = P(), d = derive(p);
+  document.querySelectorAll('[data-st]').forEach(b => {
+    const i = +b.dataset.st, st = stepStatus(p, d, i);
+    b.classList.remove('empty', 'progress', 'done'); b.classList.add(st); b.classList.toggle('on', i === S.step);
+    b.querySelector('small').textContent = STATUS_TXT[st];
+    b.setAttribute('aria-label', `Krok ${i}: ${STEPS[i - 1]} — ${STATUS_TXT[st]}`);
+  });
+  const aside = $('#aside'); if (aside) aside.innerHTML = summaryHTML(d, false);
+  document.querySelectorAll('[data-out]').forEach(el => {
+    const k = el.dataset.out, id = el.dataset.id;
+    let h = null;
+    switch (k) {
+      case 'projname': h = S.store.active === 'demo' ? `<b>Ukázka:</b> ${esc(p.meta.product)}` : (p.meta.product ? `<b>${esc(p.meta.product)}</b>${p.meta.team ? ' · ' + esc(p.meta.team) : ''}` : 'Náš projekt'); break;
+      case 'summary': h = summaryHTML(d, true); break;
+      case 'msumline': h = msumLine(d); break;
+      case 'unitshort': h = esc(d.u.short); break;
+      case 'costs': h = outCosts(d); break;
+      case 'fy': { const r = p.fixed.find(x => x.id === id); const a = r && parseNum(r.amount); h = r && r.period === 'm' && a.state === 'ok' ? `= ${fmtKc(a.value * 12)} za rok` : ''; break; }
+      case 'respstats': h = outRespStats(d); break;
+      case 'resperr': {
+        const i = p.resp.findIndex(r => r.id === id), e = d.stats.errors.find(x => x.i === i);
+        h = e ? ({ maxlow: 'Maximální cena je nižší než ideální — opravte prosím.', partial: 'Chybí druhá cena.', invalid: 'Neplatné číslo.' })[e.kind] : '';
+        const row = el.closest('.row'); if (row) row.classList.toggle('err', !!e && e.kind !== 'partial');
+        break;
+      }
+      case 'compunit': h = outCompUnit(d, id); break;
+      case 'compsum': h = outCompSum(d); break;
+      case 'threeviews': h = outThreeViews(d); break;
+      case 'pricefb': h = outPriceFb(d); break;
+      case 'markup': h = outMarkup(d); break;
+      case 'expmsg': h = outExpMsg(d); break;
+      case 'xprice': h = outXPrice(d); break;
+      case 'xcosts': h = outXCosts(d); break;
+      case 'expfb': h = outExpFb(d); break;
+      case 'xbar': h = outXBar(d); break;
+      case 'final': h = finalBodyHTML(); break;
+      case 'exptable': h = outExpTable(d); break;
+      case 'expcharts': h = outExpCharts(d); break;
+    }
+    if (h !== null && el.innerHTML !== h) el.innerHTML = h;
+  });
+  // chybové hlášky polí
+  document.querySelectorAll('[data-err]').forEach(el => {
+    const inpEl = document.querySelector(`[data-bind="${el.dataset.err}"]`);
+    el.textContent = inpEl ? numBad(inpEl.value, { neg: !!inpEl.dataset.neg }) : '';
+  });
+  if (d.qErr) { const e = document.querySelector('[data-err="meta.qty"]'); if (e) e.textContent = d.qErr; }
+  updateSaveState();
+}
+function updateSaveState() {
+  const el = $('#savestate'); if (!el) return;
+  el.textContent = S.saveOk ? (S.savedAt ? '✓ uloženo' : '') : '⚠ neukládá se';
+}
+
+// ---------- události ----------
+document.addEventListener('input', ev => {
+  const t = ev.target;
+  if (t.dataset.slider) {
+    const p = P(), k = t.dataset.slider, val = Number(t.value);
+    p.exp[k] = toInput(val); p.expTried = true;
+    const txt = document.querySelector(`[data-bind="exp.${k}"]`); if (txt) { txt.value = p.exp[k]; txt.classList.remove('bad'); }
+    scheduleSave(); refresh(); return;
+  }
+  if (!t.dataset.bind || t.dataset.check || t.type === 'radio') return;
+  if (t.tagName === 'SELECT') return; // řeší change
+  const p = P();
+  setPath(p, t.dataset.bind, t.value);
+  if (t.dataset.num) t.classList.toggle('bad', !!numBad(t.value, { neg: !!t.dataset.neg }));
+  if (t.dataset.bind[0] === 'x') p.expTried = true;
+  if (t.dataset.bind.startsWith('exp.')) {
+    p.expTried = true;
+    const k = t.dataset.bind.slice(4), sl = document.querySelector(`[data-slider="${k}"]`), r = parseNum(t.value);
+    if (sl && r.state === 'ok') sl.value = Math.min(+sl.max, Math.max(+sl.min, r.value));
+  }
+  scheduleSave(); refresh();
+});
+document.addEventListener('change', ev => {
+  const t = ev.target; if (!t.dataset.bind) return;
+  const p = P();
+  if (t.dataset.check) setPath(p, t.dataset.bind, t.checked);
+  else if (t.type === 'radio') { if (t.checked) setPath(p, t.dataset.bind, t.value); }
+  else if (t.tagName === 'SELECT') setPath(p, t.dataset.bind, t.value);
+  else return;
+  scheduleSave();
+  if (t.dataset.rerender) { const y = window.scrollY; renderStep(); window.scrollTo(0, y); } else refresh();
+});
+document.addEventListener('click', ev => {
+  const b = ev.target.closest('[data-act]'); if (!b) return;
+  const act = b.dataset.act, p = P();
+  const menu = b.closest('details.menu'); if (menu) menu.open = false;
+  const keepY = () => { const y = window.scrollY; renderStep(); window.scrollTo(0, y); };
+  switch (act) {
+    case 'go': setStep(+b.dataset.step); break;
+    case 'intro': ev.preventDefault(); S.view = 'intro'; history.replaceState(null, '', '#uvod'); renderAll(); break;
+    case 'start': S.store.active = 'own'; if (!S.store.own) S.store.own = blankProject(); saveNow(); S.view = 'step'; renderAll(); setStep(S.step || 1); break;
+    case 'demo': S.store.active = 'demo'; if (!S.store.demo) S.store.demo = demoProject(); saveNow(); S.view = 'step'; S.step = 1; renderAll(); setStep(1); toast('Načten ukázkový projekt. Váš projekt zůstává beze změny.'); break;
+    case 'toown': S.store.active = 'own'; if (!S.store.own) S.store.own = blankProject(); saveNow(); renderAll(); setStep(1); break;
+    case 'demoreset': confirmBox('Obnovit ukázkový projekt?', 'Vaše úpravy v ukázce se zahodí. Váš vlastní projekt se nezmění.', 'Obnovit ukázku', () => { S.store.demo = demoProject(); saveNow(); renderAll(); setStep(S.step, false); }); break;
+    case 'wipe': confirmBox('Smazat náš projekt?', 'Smažou se všechny vyplněné údaje v tomto prohlížeči. Pokud si je chcete ponechat, nejdřív projekt exportujte.', 'Smazat a začít znovu', () => { S.store.own = blankProject(); saveNow(); renderAll(); setStep(1); toast('Projekt byl smazán.'); }, true); break;
+    case 'addrow': {
+      const list = b.dataset.list, name = b.dataset.name || '';
+      const row = list === 'fixed' ? { id: uid(), name, amount: '', period: (FIXED_EX.find(x => x[0] === name) || [, 'm'])[1], note: '' }
+        : list === 'variable' ? { id: uid(), name, amount: '', note: '' }
+        : list === 'resp' ? { id: uid(), label: 'R' + (p.resp.length + 1), ideal: '', max: '', target: '' }
+        : { id: uid(), name: '', price: '', qty: '1', source: '', date: '', diff: '' };
+      if (list === 'xfixed' || list === 'xvariable') { const nr = list === 'xfixed' ? { id: uid(), name: '', amount: '', period: 'm' } : { id: uid(), name: '', amount: '' }; listOf(p, list).push(nr); p.expTried = true; scheduleSave(); keepY(); const f = document.querySelector(`[data-bind="${list}:${nr.id}:name"]`); if (f) f.focus(); break; }
+      if (name && (list === 'fixed' || list === 'variable')) p[list].unshift(row); else p[list].push(row); scheduleSave(); keepY();
+      const f = document.querySelector(`[data-bind^="${list}:${row.id}:${list === 'resp' ? 'ideal' : name ? 'amount' : 'name'}"]`); if (f) f.focus();
+      break;
+    }
+    case 'del': {
+      const list = b.dataset.list, it = listOf(p, list).find(r => r.id === b.dataset.id);
+      const has = it && Object.entries(it).some(([k, v]) => !['id', 'period', 'label', 'qty'].includes(k) && filled(v));
+      const doDel = () => { const arr = listOf(p, list), i = arr.findIndex(r => r.id === b.dataset.id); if (i >= 0) arr.splice(i, 1); if (list[0] === 'x') p.expTried = true; scheduleSave(); keepY(); };
+      if (has) confirmBox('Odstranit řádek?', 'Řádek obsahuje vyplněné údaje.', 'Odstranit', doDel, true); else doDel();
+      break;
+    }
+    case 'usemarkup': p.pricing.price = toInput(Math.round(Number(b.dataset.v) * 100) / 100); scheduleSave(); keepY(); toast('Cena podle přirážky je teď vaší zvolenou cenou.'); break;
+    case 'saveplan': {
+      const d = derive(p); if ([d.P, d.Q, d.F, d.v].some(x => x === null)) return;
+      const go = () => { p.plan = planSnapshot(p, d); p.exp = expFromPlan(p); scheduleSave(); keepY(); toast('Plán je uložený. Teď můžete zkoušet novou variantu.'); };
+      if (p.plan) confirmBox('Uložit plán znovu?', 'Uložený plán se nahradí aktuálními vstupy z kroků 1–5 a nová varianta se vrátí na nový plán.', 'Uložit plán', go); else go();
+      break;
+    }
+    case 'quick': {
+      const pl = p.plan, prec = unitInfo(p.meta).prec, k = b.dataset.k;
+      const e = expFromPlan(p);
+      if (k === 'P-10') e.P = toInput(round2(pl.P * 0.9));
+      if (k === 'P+10') e.P = toInput(round2(pl.P * 1.1));
+      if (k === 'Q-20') e.Q = toInput(Math.round(pl.Q * 0.8 / prec) * prec);
+      if (k === 'v+15') e.variable.forEach(r => { const a = parseNum(r.amount); if (a.state === 'ok') r.amount = toInput(a.value * 1.15); });
+      p.exp = e; p.expTried = true; scheduleSave(); keepY(); toast('Nová varianta: ' + b.textContent.trim() + ' oproti plánu.'); break;
+    }
+    case 'expreset': p.exp = expFromPlan(p); scheduleSave(); keepY(); break;
+    case 'expadopt': {
+      const x = expModel(p, unitInfo(p.meta).prec);
+      if (x.errs.length) { toast('Nejdřív opravte hodnoty nové varianty.'); return; }
+      const pl = p.plan, parts = [];
+      if (Math.abs(x.P - pl.P) > 1e-9) parts.push(`cena ${fmtKc(pl.P)} → ${fmtKc(x.P)}`);
+      if (Math.abs(x.Q - pl.Q) > 1e-9) parts.push(`plánovaný prodej ${fmtN(pl.Q)} → ${fmtN(x.Q)}`);
+      if (Math.abs(x.F - pl.F) > 1e-9) parts.push(`fixní náklady ${fmtKc(pl.F)} → ${fmtKc(x.F)}`);
+      if (Math.abs(x.v - pl.v) > 1e-9) parts.push(`variabilní náklady ${fmtKc(pl.v)} → ${fmtKc(x.v)} na jednotku`);
+      const sameItems = JSON.stringify(pl.fixed.map(r => [r.name, r.amount, r.period])) === JSON.stringify(p.exp.fixed.map(r => [r.name, r.amount, r.period])) && JSON.stringify(pl.variable.map(r => [r.name, r.amount])) === JSON.stringify(p.exp.variable.map(r => [r.name, r.amount]));
+      if (!parts.length && sameItems) { toast('Nová varianta se od plánu neliší.'); return; }
+      if (!parts.length) parts.push('upravené názvy nebo rozložení nákladových položek');
+      confirmBox('Přijmout variantu jako náš plán?', 'Změní se vstupy v krocích 1–5: ' + parts.join('; ') + '.', 'Přijmout jako náš plán', () => {
+        p.pricing.price = toInput(x.P); p.meta.qty = toInput(x.Q);
+        if (x.mode === 'markup') p.pricing.markup = toInput(x.markup);
+        p.fixed = cloneItems(p.exp.fixed.filter(r => filled(r.name) || filled(r.amount)), true);
+        p.variable = cloneItems(p.exp.variable.filter(r => filled(r.name) || filled(r.amount)), false);
+        const d = derive(p); p.plan = planSnapshot(p, d); p.exp = expFromPlan(p);
+        scheduleSave(); keepY(); toast('Nová varianta je teď vaším plánem.');
+      });
+      break;
+    }
+    case 'export': doExport(); break;
+    case 'import': importBox(); break;
+    case 'report': reportBox(); break;
+    case 'pdf': makePDF(); break;
+    case 'printhtml': offerFile(`za-kolik-shrnuti-${slug(p.meta.product)}.html`, reportHTML(), 'Verze pro tisk'); break;
+  }
+});
+
+// tooltip + crosshair
+const tip = document.createElement('div'); tip.id = 'tip'; document.body.appendChild(tip);
+document.addEventListener('pointermove', ev => {
+  const t = ev.target;
+  const svg = t.closest && t.closest('svg[data-cvp]');
+  document.querySelectorAll('svg[data-cvp] .xh').forEach(l => { if (!svg || l.ownerSVGElement !== svg) l.setAttribute('visibility', 'hidden'); });
+  if (t.dataset && t.dataset.tip) { showTip(t.dataset.tip, ev); return; }
+  if (svg && t.classList.contains('hit')) {
+    const c = JSON.parse(svg.dataset.cvp), r = svg.getBoundingClientRect(), sx = c.W / r.width;
+    const px = (ev.clientX - r.left) * sx, q = Math.max(0, (px - c.L) / (c.W - c.L - c.R) * c.qmax);
+    const line = svg.querySelector('.xh'); line.setAttribute('x1', px); line.setAttribute('x2', px); line.setAttribute('visibility', 'visible');
+    const rev = c.P * q, cost = c.F + c.v * q, pr = rev - cost;
+    showTip(`Množství: ${fmtN(q, nf0)} ${c.u}\nTržby: ${fmtKc(rev)}\nFixní náklady: ${fmtKc(c.F)}\nVariabilní náklady: ${fmtKc(c.v * q)}\nCelkové náklady: ${fmtKc(cost)}\n${pr >= 0 ? 'Zisk' : 'Ztráta'}: ${fmtKc(pr)}`, ev); return;
+  }
+  tip.classList.remove('on');
+});
+function showTip(text, ev) {
+  tip.textContent = text; tip.classList.add('on');
+  const w = tip.offsetWidth, h = tip.offsetHeight;
+  let x = ev.clientX + 14, y = ev.clientY - h - 10;
+  if (x + w > innerWidth - 8) x = ev.clientX - w - 14;
+  if (y < 8) y = ev.clientY + 16;
+  tip.style.left = x + 'px'; tip.style.top = y + 'px';
+}
+document.addEventListener('pointerleave', () => tip.classList.remove('on'));
+
+// ---------- modaly ----------
+function modal(html, wide) {
+  const m = document.createElement('div'); m.className = 'modal';
+  m.innerHTML = `<div class="box ${wide ? 'wide' : ''}" role="dialog" aria-modal="true">${html}</div>`;
+  document.body.appendChild(m);
+  const close = () => { m.remove(); document.removeEventListener('keydown', onKey); };
+  const onKey = e => { if (e.key === 'Escape') close(); };
+  document.addEventListener('keydown', onKey);
+  m.addEventListener('click', e => { if (e.target === m || e.target.closest('[data-close]')) close(); });
+  setTimeout(() => { const f = m.querySelector('[data-ok],button,textarea'); if (f) f.focus(); }, 30);
+  return { el: m, close };
+}
+function confirmBox(title, text, okLabel, onOk, danger) {
+  const md = modal(`<h3>${esc(title)}</h3><p>${esc(text)}</p><div class="acts"><button class="btn ghost" data-close>Zrušit</button><button class="btn ${danger ? 'danger' : ''}" data-ok>${esc(okLabel)}</button></div>`);
+  md.el.querySelector('[data-ok]').onclick = () => { md.close(); onOk(); };
+}
+function toast(msg) {
+  document.querySelectorAll('.toast').forEach(t => t.remove());
+  const t = document.createElement('div'); t.className = 'toast'; t.setAttribute('role', 'status'); t.textContent = msg; document.body.appendChild(t);
+  setTimeout(() => t.remove(), 3200);
+}
+function slug(s) { return (s || 'projekt').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 40) || 'projekt'; }
+async function offerFile(filename, data, label) {
+  if (DL) {
+    try { await DL.save({ filename, data }); toast(label + ' je připravený ke stažení.'); return; }
+    catch (e) { if (e && e.code === 'declined') return; }
+  }
+  // běžný web (GitHub Pages): přímé stažení
+  if (!window.claude) {
+    try { const blob = data instanceof Blob ? data : new Blob([data], { type: filename.endsWith('.json') ? 'application/json' : 'text/html' }); const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = filename; document.body.appendChild(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(a.href), 4000); toast(label + ' se stahuje.'); return; } catch (e) { }
+  }
+  // záloha: zobrazit obsah ke zkopírování
+  const md = modal(`<h3>${esc(label)}</h3><p class="hint">Stažení tady není k dispozici. Obsah zkopírujte a uložte do souboru <b>${esc(filename)}</b>.</p><textarea style="min-height:240px;font-family:ui-monospace,monospace;font-size:.78rem" readonly>${esc(data)}</textarea><div class="acts"><button class="btn ghost" data-close>Zavřít</button><button class="btn" data-ok>Kopírovat</button></div>`, true);
+  md.el.querySelector('[data-ok]').onclick = async () => { try { await navigator.clipboard.writeText(data); toast('Zkopírováno.'); } catch (e) { md.el.querySelector('textarea').select(); toast('Označeno, zkopírujte pomocí Ctrl+C.'); } };
+}
+function doExport() {
+  const p = P();
+  const data = JSON.stringify({ app: 'za-kolik', version: 1, exportedAt: new Date().toISOString(), project: p }, null, 2);
+  const date = new Date().toISOString().slice(0, 10);
+  offerFile(`za-kolik-${slug(p.meta.product)}-${date}.json`, data, 'Export projektu');
+}
+function importBox() {
+  const md = modal(`<h3>Importovat projekt</h3>
+    <p class="hint">Vyberte soubor .json exportovaný z aplikace Za kolik?, nebo jeho obsah vložte níže. Import se načte do vašeho vlastního projektu.</p>
+    <input type="file" accept=".json,application/json" id="impfile" style="margin:10px 0">
+    <textarea id="imptext" placeholder="…nebo sem vložte obsah souboru" style="min-height:120px;font-family:ui-monospace,monospace;font-size:.78rem"></textarea>
+    <div id="impmsg" style="margin-top:10px"></div>
+    <div class="acts"><button class="btn ghost" data-close>Zrušit</button><button class="btn" data-ok>Zkontrolovat a načíst</button></div>`);
+  const fileEl = md.el.querySelector('#impfile'), txt = md.el.querySelector('#imptext'), msg = md.el.querySelector('#impmsg');
+  fileEl.onchange = () => { const f = fileEl.files[0]; if (!f) return; if (f.size > 5e6) { msg.innerHTML = '<div class="info bad">Soubor je příliš velký.</div>'; return; } const r = new FileReader(); r.onload = () => { txt.value = r.result; }; r.readAsText(f); };
+  md.el.querySelector('[data-ok]').onclick = () => {
+    let res;
+    try {
+      let o; try { o = JSON.parse(txt.value); } catch (e) { throw new Error('Obsah není platný JSON. Zkontrolujte, že jste vložili celý soubor.'); }
+      if (o && o.app && o.app !== 'za-kolik') throw new Error('Soubor pochází z jiné aplikace.');
+      res = sanitizeProject(o && o.project ? o.project : o);
+    } catch (e) { msg.innerHTML = `<div class="info bad"><b>Import se nepodařil.</b> ${esc(e.message)}</div>`; return; }
+    const pr = res.project; pr.isDemo = false;
+    const summary = `Produkt: <b>${esc(pr.meta.product || 'bez názvu')}</b> · fixních položek ${pr.fixed.length} · variabilních ${pr.variable.length} · respondentů ${pr.resp.length} · konkurentů ${pr.comps.length}`;
+    const apply = () => { S.store.own = pr; S.store.active = 'own'; saveNow(); md.close(); S.view = 'step'; renderAll(); setStep(1); toast('Projekt byl načten.'); };
+    msg.innerHTML = `<div class="info">${summary}</div>${res.warn.map(w => `<div class="info warn">${esc(w)}</div>`).join('')}`;
+    const okBtn = md.el.querySelector('[data-ok]');
+    if (projectHasData(S.store.own)) {
+      msg.innerHTML += `<div class="info bad"><b>Pozor:</b> import přepíše váš rozpracovaný projekt v tomto prohlížeči. Pokud si ho chcete ponechat, nejdřív ho exportujte.</div>`;
+      okBtn.textContent = 'Přepsat a načíst'; okBtn.classList.add('danger');
+    } else okBtn.textContent = 'Načíst projekt';
+    okBtn.onclick = apply;
+  };
+}
+
+// ---------- tiskový přehled ----------
+function reportHTML() {
+  const p = P(), d = derive(p), u = d.u, pr = p.pricing, m = d.m, st = d.stats;
+  const T = s => esc(s || '—').replace(/\n/g, '<br>');
+  const kc = n => fmtKc(n);
+  const fixedRows = p.fixed.filter(r => filled(r.name) || filled(r.amount)).map(r => { const a = parseNum(r.amount); return `<tr><td>${T(r.name)}</td><td class="r">${a.state === 'ok' ? kc(a.value) : T(r.amount)}</td><td>${r.period === 'm' ? 'měsíčně' : 'ročně'}</td><td class="r">${a.state === 'ok' ? kc(r.period === 'm' ? a.value * 12 : a.value) : '—'}</td></tr>`; }).join('');
+  const varRows = p.variable.filter(r => filled(r.name) || filled(r.amount)).map(r => { const a = parseNum(r.amount); return `<tr><td>${T(r.name)}</td><td class="r">${a.state === 'ok' ? kc(a.value) : T(r.amount)}</td></tr>`; }).join('');
+  const respRows = p.resp.filter(r => filled(r.ideal) || filled(r.max)).map((r, i) => { const e = st.errors.find(x => x.i === p.resp.indexOf(r)); return `<tr><td>${T(r.label)}</td><td class="r">${T(r.ideal)}</td><td class="r">${T(r.max)}</td><td>${e ? ({ maxlow: 'max. < ideální', partial: 'neúplná', invalid: 'neplatná' })[e.kind] : ''}</td></tr>`; }).join('');
+  const compRows = d.comps.filter(x => filled(x.c.name) || filled(x.c.price)).map(x => `<tr><td>${T(x.c.name)}</td><td class="r">${T(x.c.price)}</td><td class="r">${T(x.c.qty)}</td><td class="r">${x.u.state === 'ok' ? kc(x.u.value) : '—'}</td><td>${T(x.c.source)}${x.c.date ? ', ' + esc(x.c.date.split('-').reverse().join('. ')) : ''}</td><td>${T(x.c.diff)}</td></tr>`).join('');
+  const beTxt = beHTML(m, u.short, false).replace(/<[^>]+>/g, '');
+  const css = `body{font-family:'Plus Jakarta Sans',system-ui,sans-serif;color:#16302D;max-width:900px;margin:24px auto;padding:0 24px;font-size:13px;line-height:1.45}
+  h1,h2{font-family:Fraunces,Georgia,serif;color:#06403B}h1{font-size:28px;margin:0}h2{font-size:18px;margin:26px 0 8px;border-bottom:2px solid #77D0B6;padding-bottom:4px}
+  table{width:100%;border-collapse:collapse;margin:6px 0}th,td{border-bottom:1px solid #E4E0DA;padding:5px 6px;text-align:left;vertical-align:top}th{font-size:11px;text-transform:uppercase;color:#6B7F7C}.r{text-align:right;font-variant-numeric:tabular-nums}
+  .hero{display:grid;grid-template-columns:200px 1fr;gap:12px;background:#06403B;color:#fff;border-radius:12px;padding:14px;margin:12px 0}.hero .hp{font-size:12px;color:#B9DDD5}.hero .hp b{display:block;font-family:Fraunces,Georgia,serif;font-size:30px;color:#EDD976}.hero .hk{display:grid;grid-template-columns:repeat(2,1fr);gap:6px 14px;font-size:11.5px;color:#B9DDD5}.hero .hk b{display:block;font-size:15px;color:#fff}.hero .pos{color:#77D0B6}.hero .neg{color:#D7ABFD}
+  .kpi{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}.kpi div{background:#E3F5EF;border-radius:8px;padding:8px}.kpi b{display:block;font-size:16px;font-family:Fraunces,Georgia,serif;color:#06403B}
+  .note{color:#6B7F7C;font-size:11.5px}.box{background:#FBF5D6;border-radius:8px;padding:8px 10px;margin:6px 0}.exp{border:2px dashed #D7ABFD;border-radius:10px;padding:4px 14px 12px;margin-top:26px}
+  .charts{display:grid;grid-template-columns:1fr 1fr;gap:10px}svg{width:100%;height:auto}svg text{font-size:10px;fill:#46605C;font-family:system-ui,sans-serif}.lbl{font-weight:700;fill:#16302D}.axt{fill:#6B7F7C}
+  .pos{color:#00796F}.neg{color:#06403B}.pill{font-size:10px}.hint{color:#6B7F7C}.printbar{background:#06403B;color:#fff;padding:10px 14px;border-radius:10px;display:flex;gap:10px;align-items:center;justify-content:space-between}.printbar button{background:#EDD976;border:0;border-radius:999px;padding:7px 14px;font-weight:700;cursor:pointer}
+  @media print{.printbar{display:none}body{margin:0;max-width:none}section{break-inside:avoid}h2{break-after:avoid}}`;
+  return `<!DOCTYPE html><html lang="cs"><head><meta charset="utf-8"><title>Za kolik? — ${esc(p.meta.product || 'projekt')}</title><style>${css}</style></head><body>
+  <div class="printbar"><span>Shrnutí pro tisk. Pro PDF zvolte v tisku „Uložit jako PDF“.</span><button onclick="window.print()">Vytisknout / uložit PDF</button></div>
+  <p class="note" style="margin-top:16px">Za kolik? · cenová laboratoř · ${new Date().toLocaleDateString('cs-CZ')}${p.isDemo ? ' · UKÁZKOVÝ PROJEKT' : ''}</p>
+  <h1>${T(p.meta.product)}</h1><p><b>${T(p.meta.team)}</b></p>
+  <div class="hero keep"><div class="hp">Naše finální cena<b>${kc(d.P)}</b><span>za ${esc(u.label)}</span></div>
+    <div class="hk"><div>Plánovaný prodej<b>${d.Q !== null ? fmtN(d.Q) + ' ' + esc(u.short) : '—'}</b></div><div>Roční zisk / ztráta<b class="${m.profit > 0 ? 'pos' : m.profit < 0 ? 'neg' : ''}">${m.profit === null ? '—' : (m.profit > 0 ? '▲ ' : m.profit < 0 ? '▼ ' : '') + fmtSigned(m.profit)}</b></div><div>Bod zvratu<b>${esc(beTxt)}</b></div><div>Cenová strategie<b>${pr.strategy ? STRATS[pr.strategy][0] : '—'}</b></div></div></div>
+  <section><h2>1. Produkt</h2><p>Prodejní jednotka: <b>${esc(u.label)}</b> · Plánovaný roční prodej: <b>${d.Q !== null ? fmtN(d.Q) + ' ' + esc(u.short) : '—'}</b></p>
+  <p class="note">Kalkulace: jeden produkt, jeden rok, firma není plátcem DPH (cena zákazníka = tržba firmy), prodejní poplatky jsou ve variabilních nákladech, částky v dnešních cenách.</p></section>
+  <section><h2>2. Náklady</h2><table><thead><tr><th>Fixní položka</th><th class="r">Částka</th><th>Období</th><th class="r">Za rok</th></tr></thead><tbody>${fixedRows || '<tr><td colspan="4">—</td></tr>'}</tbody></table>
+  <table><thead><tr><th>Variabilní položka</th><th class="r">Kč / ${esc(u.short)}</th></tr></thead><tbody>${varRows || '<tr><td colspan="2">—</td></tr>'}</tbody></table>
+  <p>Fixní náklady za rok: <b>${kc(d.F)}</b> · Variabilní na jednotku: <b>${kc(d.v)}</b> · Fixní na jednotku: <b>${kc(m.fixedPerUnit)}</b> · Celkové na jednotku: <b>${kc(m.unitCost)}</b></p></section>
+  <section><h2>3. Zákaznická sonda</h2><table><thead><tr><th>Respondent</th><th class="r">Ideální</th><th class="r">Maximální</th><th>Stav</th></tr></thead><tbody>${respRows || '<tr><td colspan="4">—</td></tr>'}</tbody></table>
+  <p>Úplných odpovědí: <b>${st.complete}</b> · Ideální cena průměr / medián: <b>${kc(st.idealMean)} / ${kc(st.idealMedian)}</b> · Maximální cena průměr / medián: <b>${kc(st.maxMean)} / ${kc(st.maxMedian)}</b></p>
+  <p class="note">Jde o malou orientační sondu. Průměr maximálních cen není pevný cenový strop ani důkaz, že zákazníci za tuto cenu skutečně nakoupí.</p></section>
+  <section><h2>4. Konkurence</h2>${p.noComp ? `<p><b>Přímé konkurenty jsme nenašli.</b> ${T(p.noCompReason)}</p><p><b>Současná alternativa zákazníka:</b> ${T(p.alternative)}</p>` : `<table><thead><tr><th>Konkurent</th><th class="r">Cena</th><th class="r">Jednotek</th><th class="r">Kč / ${esc(u.short)}</th><th>Zdroj, datum</th><th>Hlavní rozdíl</th></tr></thead><tbody>${compRows || '<tr><td colspan="6">—</td></tr>'}</tbody></table>`}
+  <p>Zamýšlená pozice: <b>${p.position ? POSITIONS[p.position][0] : '—'}</b></p><p>${T(p.positionWhy)}</p></section>
+  <section><h2>5. Finální cena a strategie</h2><p>Finální cena: <b>${kc(d.P)} za ${esc(u.label)}</b>${pr.markup && m.unitCost ? ` · odpovídá přirážce ${fmtPct((d.P / m.unitCost - 1) * 100)} k celkovým nákladům na jednotku` : ''}</p>
+  <p>Cenová strategie: <b>${pr.strategy ? STRATS[pr.strategy][0] : '—'}</b></p><p><b>Proč:</b> ${T(pr.strategyWhy)}</p><p><b>Proč ne ostatní:</b> ${T(pr.strategyWhyNot)}</p><p><b>Cenové manipulace:</b> ${T(pr.manipulations)}</p>
+  <div class="box"><b>Obhajoba vůči nákladům:</b> ${T(pr.defCosts)}</div><div class="box"><b>Vůči zákazníkům:</b> ${T(pr.defCustomers)}</div><div class="box"><b>Vůči konkurenci:</b> ${T(pr.defCompetition)}</div></section>
+  <section><h2>6. Ekonomické výsledky</h2><div class="kpi keep"><div>Tržby<b>${kc(m.revenue)}</b></div><div>Celkové náklady<b>${kc(m.costTotal)}</b></div><div>Roční zisk / ztráta<b>${m.profit === null ? '—' : fmtSigned(m.profit)}</b></div><div>Bod zvratu<b>${esc(beTxt)}</b></div></div>
+  <p style="margin-top:10px">Celkové náklady na jednotku: <b>${kc(m.unitCost)}</b> · Příspěvek na úhradu z jednotky: <b>${kc(m.contribution)}</b></p>
+  <div class="keep" style="max-width:640px">${chartCVP(m, u.prec, u.short, { qLabel: 'Plán' })}</div></section>
+  <p class="note" style="margin-top:24px">Výsledky jsou modelové, před zdaněním. Model předpokládá stejné variabilní náklady na jednotku, neměnné roční fixní náklady a shodný objem vyrobených a prodaných jednotek.</p>
+  </body></html>`;
+}
+function reportBox() {
+  const html = reportHTML(), p = P();
+  const body = html.split('<body>')[1].split('</body>')[0].replace(/<div class="printbar">[\s\S]*?<\/div>/, '');
+  const md = modal(`<div style="display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:10px"><h3 style="margin:0">Tiskový přehled</h3><div style="display:flex;gap:8px"><button class="btn ghost sm" data-close>Zavřít</button><button class="btn sm" data-ok>⬇ Stáhnout pro tisk / PDF</button></div></div>
+    <p class="hint">Stáhne se soubor .html. Otevřete ho v prohlížeči a zvolte „Vytisknout / uložit PDF“.</p>
+    <div style="border:1px solid var(--line);border-radius:12px;padding:6px 16px;margin-top:10px" class="rep">${body}</div>`, true);
+  md.el.querySelector('[data-ok]').onclick = () => offerFile(`za-kolik-prehled-${slug(p.meta.product)}.html`, html, 'Tiskový přehled');
+}
+
+// ---------- úvod ----------
+function introHTML() {
+  const has = projectHasData(S.store.own);
+  return `<div class="intro">
+    <svg class="tagdeco" viewBox="0 0 300 380" aria-hidden="true"><g transform="rotate(14 150 190)"><path d="M70 40h150a20 20 0 0 1 20 20v250a20 20 0 0 1-20 20H70a20 20 0 0 1-20-20V60a20 20 0 0 1 20-20z" fill="#D7ABFD"/><circle cx="145" cy="78" r="14" fill="#FBF9F7"/><path d="M145 64 C 130 10, 190 0, 200 -30" stroke="#06403B" stroke-width="3" fill="none"/><text x="145" y="200" text-anchor="middle" font-family="Fraunces, Georgia, serif" font-size="74" font-weight="700" fill="#06403B">???</text><text x="145" y="250" text-anchor="middle" font-family="Fraunces, Georgia, serif" font-size="30" fill="#06403B">Kč</text><rect x="85" y="280" width="120" height="8" rx="4" fill="#77D0B6"/></g></svg>
+    <div class="in">
+      <h1><span>Za kolik?</span></h1>
+      <div class="subt">Cena není tip. I když to tak občas vypadá.</div>
+      <p class="lead">Váš produkt už existuje. Teď potřebuje cenovku, kterou zvládnou zákazníci i vaše náklady. Projděte si náklady, zákazníky a konkurenci. Pak otestujte, co vaše cena udělá s výsledkem firmy.</p>
+      <div class="three"><span style="background:#E3F5EF">💰 náklady</span><span style="background:#F4E9FF">🙋 ochota zákazníků platit</span><span style="background:#FBF5D6">🔎 konkurence</span></div>
+      <div class="cta"><button class="btn" data-act="start">${has ? 'Pokračovat na naší ceně →' : 'Jdeme na naši cenu →'}</button></div>
+      <p class="note">Ukládání v prohlížeči platí jen pro toto zařízení a tento prohlížeč. Pro přenos mezi členy týmu použijte export projektu.</p>
+    </div></div>`;
+}
+
+// ---------- start ----------
+function route() {
+  const h = location.hash.replace('#', '');
+  const mm = /^krok-([1-7])$/.exec(h);
+  if (mm && (S.store.own || S.store.active === 'demo')) { if (!P()) S.store.own = blankProject(); S.view = 'step'; S.step = +mm[1]; renderAll(); }
+  else { S.view = 'intro'; renderAll(); }
+}
+loadStore();
+window.addEventListener('hashchange', () => { const mm = /^#krok-([1-7])$/.exec(location.hash); if (mm && S.view === 'step' && +mm[1] !== S.step) setStep(+mm[1]); else if (location.hash === '#uvod' && S.view !== 'intro') { S.view = 'intro'; renderAll(); } });
+route();
+
+</script></body></html>
